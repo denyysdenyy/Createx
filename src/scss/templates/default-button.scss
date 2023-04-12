@@ -1,0 +1,20 @@
+.default-button{
+    background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 20px 40px;
+    color: #FFFFFF; 
+    transition: all .3s ease-in-out;
+    &:hover{
+        opacity: 0.65;
+    }
+    &-second{
+        letter-spacing: 0.5px;
+        background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+}
