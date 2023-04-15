@@ -1,7 +1,13 @@
 .header {
-    position: sticky;
     margin-top: 24px;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
     background: rgba(0, 0, 0, 0.1%);
+    @media(min-width:1200px){
+        z-index: 4;
+    }
     // .header__wrapper
 
     &__wrapper {
@@ -20,21 +26,25 @@
     // .header__nav
 
     &__nav {
-        margin-left: 60px;
+        @media(min-width:1200px){
+            margin-left: 60px;
+        }
         display: flex;
         align-items: center;
         @media(max-width:1200px){
-            padding: 50px;
-            position: absolute;
-            background: black;
-            flex-direction: column;
+            position: fixed;
             max-width: 650px;
             width: 100%;
-            top: 147%;
-            left: -8%;
-            background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+            height: 100%;
+            top: 59px;
+            left: 0;
+            right: 0;
+            padding: 50px;
+            background: black;
+            flex-direction: column;
+            background: linear-gradient(53deg, #FF3F3A 8%, #F75E05 75%);
             gap: 25px;
-            transform: translateX(-100%);
+            transform: translateX(-150%);
             transition: all 325ms ease-in-out;
             &.active{
             transform: translateX(0);
