@@ -115,7 +115,7 @@
     }
 
     .default-button {
-        padding: 18px 38.5px;
+        padding: 18px 38.9px;
         &-second{
             padding: 18px 40px;
             border-radius: 4px;
@@ -142,7 +142,9 @@
             justify-content: center;
         }
         @media(max-width:991px){
+            align-items: center;
             gap: 70px;
+            flex-direction: column;
         }
         // info__content
         &__content{

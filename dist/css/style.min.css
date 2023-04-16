@@ -167,7 +167,7 @@ body._lock {
   border-radius: 4px;
   font-weight: 700;
   font-size: 16px;
-  padding: 18px 44px;
+  padding: 18px 43.3px;
   color: #FFFFFF;
   transition: all 0.3s ease-in-out;
 }
@@ -465,7 +465,7 @@ body._lock {
   }
 }
 .home-hero .default-button {
-  padding: 18px 38.5px;
+  padding: 18px 38.9px;
 }
 .home-hero .default-button-second {
   padding: 18px 40px;
@@ -493,7 +493,9 @@ body._lock {
 }
 @media (max-width: 991px) {
   .home-hero .info {
+    align-items: center;
     gap: 70px;
+    flex-direction: column;
   }
 }
 .home-hero .info__content {
@@ -525,6 +527,54 @@ body._lock {
   font-size: 16px;
 }
 
+.home-about {
+  padding-top: 190.9px;
+}
+.home-about__body {
+  display: flex;
+  gap: 135px;
+}
+@media (max-width: 1440px) {
+  .home-about__body {
+    gap: 60px;
+  }
+}
+.home-about__list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12.7px;
+  margin-bottom: 61px;
+  left: 31.5px;
+}
+.home-about__li {
+  font-weight: 400;
+  font-size: 16px;
+  color: #424551;
+  list-style: none;
+  position: relative;
+  text-align: left;
+  line-height: 25.6px;
+  max-width: 358px;
+}
+.home-about__li::before {
+  content: url(../../../img/Home/Home-about/home-about-list-type.svg);
+  top: 3px;
+  left: -30px;
+  position: absolute;
+  right: 0;
+}
+.home-about .default-button {
+  position: relative;
+  font-size: 14px;
+  padding: 14px 32.7px;
+  letter-spacing: 0.5px;
+}
+.home-about .default-section__header {
+  align-items: flex-start;
+  margin-bottom: 43px;
+  gap: 23px;
+}
 .page {
   flex: 1 1 auto;
 }
