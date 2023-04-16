@@ -6,8 +6,10 @@
     padding: 18px 43.3px;
     color: #FFFFFF; 
     transition: all .3s ease-in-out;
-    &:hover{
-        opacity: 0.65;
+    @media(min-width:1024px){
+        &:hover{
+            opacity: 0.65;
+        }
     }
     &-second{
         letter-spacing: 0.5px;

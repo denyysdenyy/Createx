@@ -5,9 +5,7 @@
     right: 0;
     position: absolute;
     background: rgba(0, 0, 0, 0.1%);
-    @media(min-width:1200px){
-        z-index: 4;
-    }
+    z-index: 4;
     // .header__wrapper
 
     &__wrapper {
@@ -46,6 +44,7 @@
             gap: 25px;
             transform: translateX(-150%);
             transition: all 325ms ease-in-out;
+            z-index: 4;
             &.active{
             transform: translateX(0);
             }
