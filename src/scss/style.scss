@@ -1,5 +1,6 @@
 @import "fonts";
 
+
 .main { 
 	min-height: calc(100vh - 513px); 
 	flex: 1 1 auto; 
@@ -104,6 +105,8 @@
 //   @import "burger"; 
   @import './pages/Home/home-hero.scss';
   @import './pages/Home/home-about.scss';
+  @import './pages/Home/home-course.scss';
+
 
  
   //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ

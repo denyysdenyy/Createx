@@ -177,6 +177,10 @@ body._lock {
   }
 }
 .default-button-second {
+  padding: 18px 40px;
+  border-radius: 4px;
+  border: 1px solid #F75E05;
+  font-size: 16px;
   letter-spacing: 0.5px;
   background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
   -webkit-background-clip: text;
@@ -599,6 +603,91 @@ body._lock {
     align-items: center;
   }
 }
+.home-course {
+  padding-top: 181px;
+}
+.home-course__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 67px;
+}
+.home-course .default-section__header {
+  align-items: flex-start;
+  gap: 17px;
+}
+.home-course .default-button-second {
+  align-self: self-end;
+}
+.home-course__grid-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+@media (max-width: 991px) {
+  .home-course__grid-cards {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+.home-course__card {
+  transition: all 400ms ease-in-out;
+  display: flex;
+  max-width: 600px;
+  border: 1px solid #E5E8ED;
+  box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+  border-radius: 4px;
+  width: 100%;
+}
+@media (min-width: 991px) {
+  .home-course__card:hover {
+    box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.16), 0px 30px 24px -10px rgba(154, 156, 165, 0.1), 0px 12px 10px -6px rgba(154, 156, 165, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+  }
+}
+@media (max-width: 767px) {
+  .home-course__card {
+    flex-direction: column;
+  }
+}
+.home-course__card-speciality {
+  padding: 4.8px 8.2px;
+  background: #03CEA4;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  inline-size: fit-content;
+  color: #FFFFFF;
+}
+.home-course__card-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+}
+.home-course__card-price {
+  font-weight: 700;
+  color: #FF4242;
+  padding-right: 8px;
+  border-right: 1px solid #787A80;
+}
+.home-course__card-teacher {
+  font-weight: 400;
+  color: #787A80;
+}
+.home-course__body {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  gap: 22px;
+}
+.home-course__info {
+  font-size: 18px;
+  display: flex;
+  gap: 8px;
+}
+
+.specialty-orange {
+  background: #ff;
+}
+
 .page {
   flex: 1 1 auto;
 }
