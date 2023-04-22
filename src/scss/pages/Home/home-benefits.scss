@@ -11,6 +11,10 @@
         display: grid;
         grid-template-columns: repeat(4,1fr);
         margin-bottom: 65px;
+        @media(max-width:768px){
+            place-items: center;
+            grid-template-columns: 1fr;
+        }
     }
 
     // .home-benefits__nav-btn
@@ -62,6 +66,9 @@
         align-items: center;
         gap: 135px;
         display: none;
+        @media(max-width:991px){
+            flex-direction: column;
+        }
     }
     &__tab-content.active{
         display: flex;
@@ -95,6 +102,9 @@
     // .home-benefits__tab-logo
 
     &__tab-logo {
+        @media(max-width:768px){
+            width: 100%;
+        }
     }
     .default-section__header{
         margin-bottom: 71px;

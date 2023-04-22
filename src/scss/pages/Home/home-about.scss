@@ -38,6 +38,9 @@
         gap: 12.7px;
         margin-bottom: 61px;
         left: 31.5px;
+        @media(max-width:425px){
+            left: unset;
+        }
     }
 
     // .home-about__li
@@ -51,14 +54,18 @@
         text-align: left;
         line-height: 25.6px;
         max-width: 358px;
-       
-        &::before{
-            content: url(../../../img/Home/Home-about/home-about-list-type.svg);
-            top: 3px;
-            left: -30px;
-            position: absolute;
-            right: 0;
-            
+        @media(max-width:425px){
+            text-align: center;
+        }
+        @media(min-width:425px){
+            &::before{
+                content: url(../../../img/Home/Home-about/home-about-list-type.svg);
+                top: 3px;
+                left: -30px;
+                position: absolute;
+                right: 0;
+                
+            }
         }
     }
 

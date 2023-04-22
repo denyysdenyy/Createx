@@ -546,6 +546,11 @@ body._lock {
   margin-bottom: 61px;
   left: 31.5px;
 }
+@media (max-width: 425px) {
+  .home-about__list {
+    left: unset;
+  }
+}
 .home-about__li {
   font-weight: 400;
   font-size: 16px;
@@ -556,12 +561,19 @@ body._lock {
   line-height: 25.6px;
   max-width: 358px;
 }
-.home-about__li::before {
-  content: url(../../../img/Home/Home-about/home-about-list-type.svg);
-  top: 3px;
-  left: -30px;
-  position: absolute;
-  right: 0;
+@media (max-width: 425px) {
+  .home-about__li {
+    text-align: center;
+  }
+}
+@media (min-width: 425px) {
+  .home-about__li::before {
+    content: url(../../../img/Home/Home-about/home-about-list-type.svg);
+    top: 3px;
+    left: -30px;
+    position: absolute;
+    right: 0;
+  }
 }
 .home-about .default-button {
   position: relative;
@@ -707,6 +719,12 @@ body._lock {
   grid-template-columns: repeat(4, 1fr);
   margin-bottom: 65px;
 }
+@media (max-width: 768px) {
+  .home-benefits__nav-menu {
+    place-items: center;
+    grid-template-columns: 1fr;
+  }
+}
 .home-benefits__nav-btn {
   display: flex;
   justify-content: center;
@@ -747,6 +765,11 @@ body._lock {
   gap: 135px;
   display: none;
 }
+@media (max-width: 991px) {
+  .home-benefits__tab-content {
+    flex-direction: column;
+  }
+}
 .home-benefits__tab-content.active {
   display: flex;
 }
@@ -766,6 +789,11 @@ body._lock {
   color: #424551;
   max-width: 495px;
   width: 100%;
+}
+@media (max-width: 768px) {
+  .home-benefits__tab-logo {
+    width: 100%;
+  }
 }
 .home-benefits .default-section__header {
   margin-bottom: 71px;
