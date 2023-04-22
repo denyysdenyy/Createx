@@ -32,6 +32,6 @@ function courseDataQuery(){
         
             homeCourseCard[i].innerHTML = markup();
           });
-        })
+        });
 }
 courseDataQuery()

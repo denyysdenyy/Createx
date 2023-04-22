@@ -11,33 +11,6 @@
   }
 }
 
-@font-face {
-  font-family: "account-logo";
-  src: url("../fonts/account-logo.eot?2ec4k6");
-  src: url("../fonts/icons/account-logo/account-logo.eot") format("embedded-opentype"), url("../fonts/icons/account-logo/account-logo.ttf") format("truetype"), url("../fonts/icons/account-logo/account-logo.woff") format("woff"), url("../fonts/icons/account-logo/account-logo.svg") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-[class^=icon-], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "account-logo" !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-logo:before {
-  content: "\e900";
-  color: #424551;
-}
-
 * {
   padding: 0px;
   margin: 0px;
@@ -297,6 +270,8 @@ body._lock {
   }
 }
 .header__account {
+  display: flex;
+  align-items: center;
   margin-left: 36px;
   cursor: pointer;
 }
@@ -366,6 +341,7 @@ body._lock {
   transform: rotateZ(-45deg);
 }
 
+/* HOME */
 .home-hero {
   padding-bottom: 80px;
   position: relative;
@@ -605,18 +581,35 @@ body._lock {
 }
 .home-course {
   padding-top: 181px;
+  margin-bottom: 182px;
 }
 .home-course__header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 67px;
 }
+@media (max-width: 991px) {
+  .home-course__header {
+    flex-direction: column;
+    gap: 17px;
+  }
+}
 .home-course .default-section__header {
   align-items: flex-start;
   gap: 17px;
 }
+@media (max-width: 991px) {
+  .home-course .default-section__header {
+    align-items: center;
+  }
+}
 .home-course .default-button-second {
   align-self: self-end;
+}
+@media (max-width: 991px) {
+  .home-course .default-button-second {
+    align-self: center;
+  }
 }
 .home-course__grid-cards {
   display: grid;
@@ -672,6 +665,31 @@ body._lock {
   font-weight: 400;
   color: #787A80;
 }
+@media (min-width: 992px) {
+  .home-course__card:nth-child(2) {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .home-course__card:nth-child(3) {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .home-course__card:nth-child(4) {
+    grid-row: 1;
+    grid-column: 2;
+  }
+}
+@media (min-width: 992px) and (min-width: 1440px) {
+  .home-course__card:nth-child(4) {
+    white-space: nowrap;
+  }
+}
+@media (min-width: 992px) {
+  .home-course__card:nth-child(5) {
+    grid-row: 2;
+    grid-column: 2;
+  }
+}
 .home-course__body {
   display: flex;
   flex-direction: column;
@@ -684,8 +702,74 @@ body._lock {
   gap: 8px;
 }
 
-.specialty-orange {
-  background: #ff;
+.home-benefits__nav-menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 65px;
+}
+.home-benefits__nav-btn {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  box-sizing: border-box;
+  background: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #9A9CA5;
+  padding: 10px;
+}
+@media (min-width: 991px) {
+  .home-benefits__nav-btn:hover {
+    color: #FF3F3A;
+    outline: 1px solid #FF3F3A;
+    border-radius: 4px;
+  }
+  .home-benefits__nav-btn:hover * {
+    fill: red;
+  }
+}
+.home-benefits__nav-btn.active {
+  color: #FF3F3A;
+  outline: 1px solid #FF3F3A;
+  border-radius: 4px;
+}
+.home-benefits__nav-btn.active * {
+  fill: red;
+}
+.home-benefits__tab {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+}
+.home-benefits__tab-content {
+  align-items: center;
+  gap: 135px;
+  display: none;
+}
+.home-benefits__tab-content.active {
+  display: flex;
+}
+.home-benefits__tab-body {
+  display: flex;
+  flex-direction: column;
+  gap: 30.5px;
+}
+.home-benefits__tab-title {
+  font-weight: 900;
+  font-size: 32px;
+}
+.home-benefits__tab-discription {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #424551;
+  max-width: 495px;
+  width: 100%;
+}
+.home-benefits .default-section__header {
+  margin-bottom: 71px;
+  gap: 19px;
 }
 
 .page {

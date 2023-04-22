@@ -104,6 +104,8 @@
     // .header__account
 
     &__account {
+        display: flex;
+        align-items: center;
         margin-left: 36px;
         cursor: pointer;
         @media(max-width:1200px){
