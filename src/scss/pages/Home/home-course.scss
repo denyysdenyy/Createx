@@ -12,7 +12,7 @@
     &__header {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 67px;
+        margin-bottom: 66px;
         @media(max-width:991px){
             flex-direction: column;
             gap: 17px;
@@ -46,10 +46,7 @@
     }
 
     .default-button-second{
-        align-self: self-end;
-        @media(max-width:991px){
             align-self: center;
-        }
     }
 
     &__grid-cards{

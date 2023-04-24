@@ -1,0 +1,43 @@
+.home-events {
+    padding-top: 84px;
+    background-color: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+    position: relative;
+    &:after{
+        content: "";
+        background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+        opacity: 0.2;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;   
+        };
+
+    // .home-events__body
+
+    &__body {
+        display: grid;
+        row-gap: 24px;
+    }
+
+.default-section {
+
+    // .default-section__header
+
+    &__header {
+        margin-bottom: 66px;
+        gap: 17px;
+    }
+
+    // .default-section__header-subtitle
+
+    &__header-subtitle {
+    }
+
+    // .default-section__header-title
+
+    &__header-title {
+    }
+}
+}
