@@ -188,16 +188,26 @@ body._lock {
 .events__card {
   background: #FFFFFF;
   border-radius: 4px;
-  padding: 32px 40px;
+  padding: 36px 40px;
   display: flex;
-  gap: 48px;
+  gap: 40px;
   transition: all 400ms ease-in-out;
 }
 .events__card:hover {
   box-shadow: 0px 80px 80px -20px rgba(255, 63, 58, 0.16), 0px 30px 24px -10px rgba(255, 63, 58, 0.1), 0px 12px 10px -6px rgba(255, 63, 58, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
 }
+@media (max-width: 768px) {
+  .events__card {
+    flex-direction: column;
+  }
+}
 .events__card .default-button-second {
   margin-left: auto;
+  font-size: 14px;
+  padding: 11px 32px;
+  transition: all 400ms ease-in-out;
+  max-height: 44px;
+  text-align: center;
 }
 .events__card .default-button-second:hover {
   background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
@@ -243,12 +253,7 @@ body._lock {
 .events__discription {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-}
-.events .default-button-second {
-  font-size: 14px;
-  padding: 18px 32px;
-  transition: all 400ms ease-in-out;
+  gap: 16px;
 }
 
 .header {
@@ -433,6 +438,11 @@ body._lock {
   display: flex;
   margin-bottom: 263.5px;
 }
+@media (max-width: 1440px) {
+  .home-hero__body {
+    justify-content: space-between;
+  }
+}
 @media (max-width: 991px) {
   .home-hero__body {
     text-align: center;
@@ -453,13 +463,17 @@ body._lock {
 }
 .home-hero-img {
   display: none;
-  position: absolute;
-  right: -4%;
-  bottom: -15.5%;
 }
 @media (min-width: 425px) {
   .home-hero-img {
     display: block;
+  }
+}
+@media (min-width: 1440px) {
+  .home-hero-img {
+    position: absolute;
+    right: -4%;
+    bottom: -15.5%;
   }
 }
 @media (max-width: 1200px) {
@@ -616,7 +630,7 @@ body._lock {
   margin-bottom: 61px;
   left: 31.5px;
 }
-@media (max-width: 425px) {
+@media (max-width: 1440px) {
   .home-about__list {
     left: unset;
   }
@@ -886,7 +900,7 @@ body._lock {
 }
 .home-events__body {
   display: grid;
-  row-gap: 24px;
+  row-gap: 26px;
 }
 .home-events .default-section__header {
   margin-bottom: 66px;

@@ -23,9 +23,13 @@
     // .home-hero__body
     
     &__body {
+       
         position: relative;
         display: flex;
         margin-bottom: 263.5px;
+        @media(max-width:1440px){
+            justify-content: space-between;
+        }
         @media(max-width:991px){
             text-align: center;
             align-items: center;
@@ -52,9 +56,12 @@
         @media(min-width: 425px){
             display: block;
         }
-        position: absolute;
-        right: -4%;
-        bottom: -15.5%;
+        @media(min-width:1440px){
+            position: absolute;
+            right: -4%;
+            bottom: -15.5%;
+        }
+        
         @media(max-width:1200px){
             position: relative;
             width: 45%;
