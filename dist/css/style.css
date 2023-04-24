@@ -256,6 +256,80 @@ body._lock {
   gap: 16px;
 }
 
+.createx-certificate {
+  padding-top: 120px;
+}
+.createx-certificate__wrapper {
+  display: flex;
+}
+@media (max-width: 1439px) {
+  .createx-certificate__wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 35px;
+  }
+}
+@media (min-width: 1440px) {
+  .createx-certificate__body {
+    margin-right: 70px;
+  }
+}
+.createx-certificate__discription {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #424551;
+  margin-bottom: 29.3px;
+}
+.createx-certificate__partners {
+  display: none;
+  gap: 40.6px;
+}
+@media (min-width: 525px) {
+  .createx-certificate__partners {
+    display: flex;
+  }
+}
+@media (max-width: 1439px) {
+  .createx-certificate__partners {
+    justify-content: center;
+  }
+}
+.createx-certificate-img {
+  width: 100%;
+}
+.createx-certificate marquee {
+  display: none;
+}
+@media (max-width: 425px) {
+  .createx-certificate marquee {
+    display: block;
+  }
+}
+.createx-certificate .default-section__header {
+  gap: 11px;
+  margin-bottom: 48px;
+}
+.createx-certificate .default-section__header-subtitle {
+  line-height: 25px;
+  text-align: left;
+}
+@media (max-width: 768px) {
+  .createx-certificate .default-section__header-subtitle {
+    text-align: center;
+  }
+}
+.createx-certificate .default-section__header-title {
+  text-align: left;
+  line-height: 124%;
+}
+@media (max-width: 768px) {
+  .createx-certificate .default-section__header-title {
+    text-align: center;
+  }
+}
+
 .header {
   margin-top: 24px;
   top: 0;
@@ -883,6 +957,7 @@ body._lock {
 }
 
 .home-events {
+  padding-bottom: 80px;
   padding-top: 84px;
   background-color: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
   position: relative;
@@ -901,11 +976,28 @@ body._lock {
 .home-events__body {
   display: grid;
   row-gap: 26px;
+  margin-bottom: 63px;
+}
+.home-events__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+@media (max-width: 768px) {
+  .home-events__footer {
+    flex-direction: column;
+  }
+}
+.home-events__subtitle {
+  font-weight: 700;
+  font-size: 28px;
 }
 .home-events .default-section__header {
   margin-bottom: 66px;
   gap: 17px;
 }
+
 .page {
   flex: 1 1 auto;
 }
