@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "createx_courses",
+  "info": {
+    "singularName": "createx",
+    "pluralName": "createx-courses",
+    "displayName": "CreatexCourses"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "author": {
+      "type": "string"
+    },
+    "specialty": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "avatar": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

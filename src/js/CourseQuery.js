@@ -84,7 +84,7 @@
               homeEventsCard = document.querySelectorAll('.events__card');
         
         if(homeEventsSection){
-        const url = 'http://localhost:1337/api/createx-lectures';
+        const url = 'http://localhost:1337/api/lectures';
 
                 // Получение данных
             fetch(url).then((data) =>{
@@ -96,6 +96,8 @@
                 data.forEach(({attributes:{date,month,start,finish,title,subtitle}},i) =>{
                     
                     const formattedDate = date <= 9 ? `0${date}` : date;
+                    
+             
                     
                         const changeStart  = start.split('').splice(0,5).join(''),
                               changeFinish = finish.split('').splice(0,5).join('') ;
