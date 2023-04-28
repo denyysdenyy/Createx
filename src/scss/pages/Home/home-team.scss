@@ -59,6 +59,14 @@
         }
       }
 
+      &__swiper-buttons{
+        position: absolute;
+        top: 0;
+        right: 0;
+        
+      
+      }
+
     // .home-team__card-list
 
       &__card-list{
@@ -140,17 +148,24 @@
         // .default-section__header-subtitle
     
         &__header-subtitle {
-            text-align: left;
+            @media(min-width:991px){
+                text-align: left;
+            }
         }
     
         // .default-section__header-title
     
         &__header-title {
-            text-align: left;
+            @media(min-width:991px){
+                text-align: left;
+            }
+            
 
         }
     }
-    .swiper-slide{
-    }
+
+    .home-team-swiper-button-prev{
+        left: -60px;
+      }
 }
 

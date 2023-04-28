@@ -1,27 +1,39 @@
-import Swiper, { Navigation} from 'swiper';
+import Swiper, { Navigation,Autoplay} from 'swiper';
 
 function createxSwiper(){
 
     const homeTeamSeciton = document.querySelector('.home-team')
     if(homeTeamSeciton){
         const swiper = new Swiper('.home-team__swiper', {
-            // configure Swiper to use modules
-            centeredSlides:true,
-            centeredSlidesBounds:true,
-            spaceBetween:30,
-            modules:[Navigation],
+
+            modules:[Navigation,Autoplay],
+            autoplay:{
+                delay:2000
+            },
+            
             navigation:{
-                nextEl:'.swiper-button-next',
-                prevEl:'.swiper-button-prev',
+                nextEl:'.home-team-swiper-button-next',
+                prevEl:'.home-team-swiper-button-prev',
             },
               breakpoints:{
-                325:{
-                    slidesPerView: 1,
-                    breakpoints:10,
+                320:{
+                    centeredSlidesBounds:true,
+                    slidesPerView:1,
+                    centeredSlides:true,
+                    spaceBetween:10,
                 },
-                768:{
-                    slidesPerView:4,
-                    breakpoints:30,
+                525:{
+                    slidesPerView:2,
+                },
+                991:{
+                    spaceBetween:30,
+                    slidesPerView:3,
+
+                },
+                1200:{
+                    slidesPerView:3,
+                    spaceBetween:30,
+
                 },
               }
           });

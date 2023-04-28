@@ -1,2 +1,112 @@
+@font-face {
+  font-family: 'swiper-buttons';
+  src:  url('../fonts/swiper-buttons.eot');
+  src:  url('../fonts/swiper-buttons.eot') format('embedded-opentype'),
+    url('../fonts/swiper-buttons.ttf') format('truetype'),
+    url('../fonts/swiper-buttons.woff') format('woff'),
+    url('../fonts/swiper-buttons.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="home-team-swiper-button-"], [class*=" home-team-swiper-button-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'swiper-buttons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 
+
+
+
+.home-team-swiper-button-next,.home-team-swiper-button-prev{
+  &.swiper-button-disabled{
+   &::before{
+    color: #FF3F3A;
+   }
+  }
+  position: absolute;
+  cursor: pointer;
+  @media(min-width:1024px){
+    &:hover{
+      &::before{
+        transition: all 250ms ease-in-out;
+        background: #FF3F3A;
+        padding: 18px 14px;
+        border-radius: 50%;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media(min-width:1024px){
+  .home-team-swiper-button-next:before {
+    content: "\e900";
+    color: #424551;
+  }
+  .home-team-swiper-button-prev:before {
+    content: "\e901";
+    color: #424551;
+  }
+}
+
+
+@font-face {
+  font-family: 'social-links';
+  src:  url('../fonts/social-links.eot');
+  src:  url('../fonts/social-links.eot') format('embedded-opentype'),
+    url('../fonts/social-links.ttf') format('truetype'),
+    url('../fonts/social-links.woff') format('woff'),
+    url('../fonts/social-links.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="link-"], [class*=" link-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'social-links' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.link-facebook,.link-instagram,.link-linkedin{
+  &:hover{
+    &::before{
+      transition: all 350ms ease-in-out;
+      color: #fff;
+    }
+  }
+  &::before{
+    font-size: 20px;
+    color: #A8A9AE;
+  }
+}
+.link-instagram:before {
+  content: "\e900";
+}
+.link-linkedin:before {
+  content: "\e901";
+}
+.link-facebook:before {
+  content: "\e902";
+}
