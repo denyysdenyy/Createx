@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "createx_courses",
+  "collectionName": "authors_createx",
   "info": {
-    "singularName": "createx",
-    "pluralName": "createx-courses",
-    "displayName": "CreatexCourses",
-    "description": ""
+    "singularName": "authors",
+    "pluralName": "authors-createx",
+    "displayName": "Authors"
   },
   "options": {
     "draftAndPublish": true
@@ -18,22 +17,15 @@
     "specialty": {
       "type": "string"
     },
-    "title": {
-      "type": "string"
-    },
-    "price": {
-      "type": "decimal"
-    },
     "avatar": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

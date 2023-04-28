@@ -998,6 +998,100 @@ body._lock {
   gap: 17px;
 }
 
+.home-team__wrapper {
+  position: relative;
+}
+.home-team__swiper {
+  box-sizing: border-box;
+  width: 100%;
+  overflow: hidden;
+}
+.home-team__card {
+  max-width: 287px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.home-team__card-wrapper {
+  border-radius: 4px;
+  padding-top: 20px;
+  background-image: linear-gradient(180deg, #FFCF2D, #FFCF2D);
+  margin-bottom: 20px;
+  position: relative;
+}
+@media (min-width: 991px) {
+  .home-team__card-wrapper:hover .home-team__card-list {
+    transform: translateY(0);
+    z-index: 2;
+    opacity: 1;
+  }
+}
+.home-team__card-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(180deg, rgba(30, 33, 44, 0) 43.9%, rgba(30, 33, 44, 0.03) 55.21%, rgba(30, 33, 44, 0.33) 68.73%, rgba(30, 33, 44, 0.56) 76.17%, rgba(30, 33, 44, 0.768225) 83.75%, rgba(30, 33, 44, 0.92) 91.49%, #1E212C 100%);
+  opacity: 0;
+  transition: opacity 350ms ease-in-out;
+}
+@media (min-width: 991px) {
+  .home-team__card-wrapper:hover::after {
+    opacity: 1;
+  }
+}
+.home-team__card-list {
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  right: 12px;
+  display: flex;
+  bottom: 12px;
+  transform: translateY(150%);
+  transition: all 350ms ease-in-out;
+}
+.home-team__card-list svg {
+  width: 20px;
+  height: 20px;
+}
+@media (min-width: 991px) {
+  .home-team__card-list svg:hover path {
+    fill: white;
+  }
+}
+.home-team__card-list svg path {
+  fill: #A7A9AD;
+}
+.home-team__card-li:nth-of-type(1) {
+  margin-right: 17px;
+}
+.home-team__card-li:nth-of-type(2) {
+  margin-right: 12px;
+}
+.home-team__author-name {
+  font-weight: 700;
+  font-size: 20px;
+  color: #424551;
+  margin-bottom: 4px;
+}
+.home-team__author-specialty {
+  font-weight: 400;
+  font-size: 16px;
+  color: #787A80;
+}
+.home-team .default-section__header {
+  margin-bottom: 60px;
+}
+.home-team .default-section__header-subtitle {
+  text-align: left;
+}
+.home-team .default-section__header-title {
+  text-align: left;
+}
 .page {
   flex: 1 1 auto;
 }

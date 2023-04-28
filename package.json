@@ -17,7 +17,9 @@
 	"dependencies": {
 		"aos": "^2.3.4",
 		"countup.js": "^2.6.0",
-		"gulp-cli": "^2.3.0"
+		"gulp-cli": "^2.3.0",
+		"strapi-plugin-populate-deep": "^2.0.0",
+		"swiper": "^9.2.4"
 	},
 	"devDependencies": {
 		"browser-sync": "latest",
@@ -46,7 +48,6 @@
 		"gulp-webpcss": "latest",
 		"gulp-zip": "latest",
 		"sass": "latest",
-		"swiper": "^9.2.4",
 		"vinyl-ftp": "latest",
 		"webp-converter": "2.2.3",
 		"webpack": "latest",

@@ -1,6 +1,7 @@
 @import "fonts";
 
 
+
 .main { 
 	min-height: calc(100vh - 513px); 
 	flex: 1 1 auto; 
@@ -37,7 +38,7 @@
    
   //<ПЕРЕМЕННЫЕ>=========================================================================================================== 
   $minWidth: 320px; 
-  $maxWidth: 1440px; 
+  $maxWidth: 1920 px; 
   $maxWidthContainer: 1585px; 
   $md1: $maxWidthContainer + 12; 
   $md2: 992; 
@@ -106,7 +107,7 @@
    
   @import "./pages/header.scss"; 
 //   @import "footer"; 
-//   @import "burger"; 
+  // @import "burger"; 
 
 /* HOME */
   @import './pages/Home/home-hero.scss';

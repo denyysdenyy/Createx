@@ -49,14 +49,16 @@
     homeCourseCard = document.querySelectorAll('.home-course__card');
 
     if (homeCourseSection) {
-        const url = 'http://localhost:1337/api/createx-courses';
+        const url = 'http://localhost:1337/api/createx-courses?populate=deep&_limit=500';
       
         const fetchData = async () => {
           const response = await fetch(url);
-          const { data } = await response.json();
-          data.forEach(({ attributes: { title, price, author, specialty } }, i) => {
+          const { data } = await response.json(); 
+          console.log(data)
+
+          data.forEach(({ attributes: { title, price, author, specialty, avatar:{data:{attributes:{url}}}}}, i) => {
             const markup = `
-              <img src="img/Home/Home-course/card/teacher-1.png" alt="${author}" class="home-course__card-img">
+              <img src="http://localhost:1337${url}" alt="${author}" class="home-course__card-img">
               <div class="home-course__body">
                 <h6 class="home-course__card-speciality">${specialty}</h6>
                 <h4 class="home-course__card-title">${title}</h4>
@@ -122,18 +124,9 @@
 
                 })
             })
-
-            
-
-
-
-
-
         }
     }
     homeEventsDataQuery()
 
-
-    
-}
+  }
 dataQuery()
