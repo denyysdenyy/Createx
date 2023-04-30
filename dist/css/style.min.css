@@ -1292,6 +1292,9 @@ body._lock {
 .comments .swiper-pagination-bullet-active {
   background-color: #424551;
 }
+.comments .default-section__header {
+  margin-bottom: 60px;
+}
 
 .page {
   flex: 1 1 auto;

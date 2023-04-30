@@ -51,16 +51,15 @@ function createxSwiper(){
             const swiper = new Swiper('.comments__swiper', {
                 modules:[Navigation,Autoplay,Pagination],
                 loop:true,
-                // autoplay:{
-                //     delay:2000
-                // },
-                speed: 1000,
+                autoplay:{
+                    delay:2000
+                },
+                speed: 500,
                 pagination: {
                     el: '.swiper-pagination',
                   },
                 centeredSlides:true,
                 centeredSlidesBounds:true,
-
               });
         }
     }

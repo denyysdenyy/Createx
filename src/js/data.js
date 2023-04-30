@@ -130,7 +130,7 @@
       // ---------------------------------------------------------------------------
   // HOME-TEAM SECTION
 
-  function homeTeamDataQuery() {
+  function getTeamData() {
     const homeTeamSection = document.querySelector('.home-team')
     const homeTeamCard = document.querySelectorAll('.home-team__card')
       if(homeTeamSection){
@@ -161,14 +161,41 @@
           })
           
         })
-        
-        
-        
-        
-
       }
     }
 
-    homeTeamDataQuery()
+    getTeamData()
+
+
+    // SECTION COMMENTS
+    function getCommentsData(){
+      const commentsSection = document.querySelector('.comments');
+      const commentsCard = document.querySelectorAll('.comments__card')
+      if(commentsSection){
+        const url = 'http://localhost:1337/api/createx-students?populate=deep&_limit=500';
+        fetch(url).then(data =>{
+         return data.json()
+        }).then(({data}) =>{
+          console.log(data)
+          data.forEach(({attributes:{name,comment,position,course,avatar:{data:[{attributes:{url}}]}}},i)=>{
+            
+            const markup = () =>{
+              return `<p class="comments__text">${comment}</p>
+                 <div class="comments__profile">
+                  <img src="http://localhost:1337${url}" alt="" class="comments__avatar">
+                  <div class="comments__user-info">
+                      <p class="comments__user-name">${name}</p>
+                      <p class="comments__user-position">${position} , ${course}</p>
+                  </div>
+              </div>`
+            }
+            commentsCard[i].innerHTML = markup();
+
+          })
+        }).catch(console.log('error'))
+
+      }
+    }
+    getCommentsData()
   }
 dataQuery()

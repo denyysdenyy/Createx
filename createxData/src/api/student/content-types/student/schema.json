@@ -15,9 +15,6 @@
     "name": {
       "type": "string"
     },
-    "specialty": {
-      "type": "string"
-    },
     "avatar": {
       "type": "media",
       "multiple": true,
@@ -31,6 +28,12 @@
     },
     "comment": {
       "type": "text"
+    },
+    "position": {
+      "type": "string"
+    },
+    "course": {
+      "type": "string"
     }
   }
 }
