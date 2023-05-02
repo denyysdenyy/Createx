@@ -55,6 +55,10 @@ function createxSwiper(){
                     delay:2000
                 },
                 speed: 500,
+                navigation:{
+                    nextEl:'.comments-swiper-button-next',
+                    prevEl:'.comments-swiper-button-prev'
+                },
                 pagination: {
                     el: '.swiper-pagination',
                   },

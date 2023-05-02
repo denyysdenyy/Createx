@@ -1,0 +1,1 @@
+1. All data was received from CMS Strapi

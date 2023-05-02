@@ -1,3 +1,4 @@
+// SWIPER-BUTTONS
 @font-face {
   font-family: 'swiper-buttons';
   src:  url('../fonts/swiper-buttons.eot');
@@ -10,7 +11,7 @@
   font-display: block;
 }
 
-[class^="home-team-swiper-button-"], [class*=" home-team-swiper-button-"] {
+[class^="createx-swiper-button-"], [class*=" createx-swiper-button-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'swiper-buttons' !important;
   speak: never;
@@ -24,12 +25,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-
-
-
-
-.home-team-swiper-button-next,.home-team-swiper-button-prev{
+.createx-swiper-button-next,.createx-swiper-button-prev{
   &.swiper-button-disabled{
    &::before{
     color: #FF3F3A;
@@ -37,6 +33,7 @@
   }
   position: absolute;
   cursor: pointer;
+  font-size: 13px;
   @media(min-width:1024px){
     &:hover{
       &::before{
@@ -51,17 +48,25 @@
 }
 
 @media(min-width:1024px){
-  .home-team-swiper-button-next:before {
+  .createx-swiper-button-next:before {
     content: "\e900";
     color: #424551;
   }
-  .home-team-swiper-button-prev:before {
+  .createx-swiper-button-prev:before {
     content: "\e901";
     color: #424551;
   }
 }
 
 
+
+
+
+
+
+
+
+// SOCIAL LINKS
 @font-face {
   font-family: 'social-links';
   src:  url('../fonts/social-links.eot');
@@ -109,4 +114,44 @@
 }
 .link-facebook:before {
   content: "\e902";
+}
+
+@font-face {
+  font-family: 'icon-login';
+  src:  url('../fonts/icon-login.eot');
+  src:  url('../fonts/icon-login.eot') format('embedded-opentype'),
+    url('../fonts/icon-login.ttf') format('truetype'),
+    url('../fonts/icon-login.woff') format('woff'),
+    url('../fonts/icon-login.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="createx-icon-"], [class*=" createx-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icon-login' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.createx-icon-account{
+  &:hover{
+    &::before{
+      color: #F75E05;
+    }
+  }
+}
+.createx-icon-account:before {
+  transition: all 350ms ease-in-out;
+  content: "\e900";
+  color: #424551;
 }
