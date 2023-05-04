@@ -7,6 +7,7 @@
     color: #FFFFFF; 
     transition: all .3s ease-in-out;
     max-height: 52px;
+    cursor: pointer;
     @media(min-width:1024px){
         &:hover{
             opacity: 0.65;
