@@ -6,6 +6,7 @@
     padding: 18px 43.3px;
     color: #FFFFFF; 
     transition: all .3s ease-in-out;
+    max-height: 52px;
     @media(min-width:1024px){
         &:hover{
             opacity: 0.65;

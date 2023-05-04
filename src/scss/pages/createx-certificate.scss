@@ -44,11 +44,11 @@
             justify-content: center;
         }
     }
-
-//    &-partner {
-//     }
    &-img {
-    width: 100%;
+       width: 100%;
+       @media(max-width:1439px){
+           max-width: 500px;
+       }
     position: relative;
     bottom: 1px;
     }

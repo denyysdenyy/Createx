@@ -13,7 +13,7 @@
 
     &__swiper {
         box-sizing: border-box;
-        width: 100%;
+        max-width: 100%;
         overflow: hidden;
     }
 
@@ -178,6 +178,9 @@
             position: absolute;
             background: #FF3F3A
         }
+    }
+    .swiper-slide{
+        max-width: 300px;
     }
 }
 
