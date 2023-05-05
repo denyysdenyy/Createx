@@ -1,6 +1,6 @@
 .latest-posts {
-    padding-top: 120px;
-    padding-bottom: 180px;
+    padding-top: 181px;
+    padding-bottom: 185px;
     display: none;
     @media(min-width:1240px){
         display: block;
@@ -11,7 +11,7 @@
     &__header {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 60px;
+        margin-bottom: 66px;
         @media(max-width:525px){
             align-items: center;
             flex-direction: column;
@@ -41,7 +41,7 @@
 
     &__wrapper {
         position: relative;
-        margin-bottom: 16px;
+        margin-bottom: 21px;
     }
 
     // .latest-posts__info
@@ -59,7 +59,7 @@
     // .latest-posts__discription
 
     &__discription {
-        margin-bottom: 16px;
+        margin-bottom: 20px;
     }
      // .latest-posts-img
     &-post-img {
@@ -77,6 +77,7 @@
      // .latest-posts-specialty
     &-specialty {
         font-weight: 700;
+        font-size: 14px;
     }
      // .latest-posts-date
     &-date {

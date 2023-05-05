@@ -4,33 +4,24 @@
 	"title":"Главная"
 	})
 	<body >
-		@@include('html/header.html',{})
-		<main>
-		@@include('html/Home/_home-hero.html',{})
-		@@include('html/Home/_home-about.html',{})
-		@@include('html/Home/_home-course.html',{}) 
-		@@include('html/Home/_home-benefits.html',{}) 
-		@@include('html/Home/_home-events.html',{}) 
-		@@include('html/templates/_createx-certificate.html',{}) 
-		@@include('html/Home/_home-team.html',{}) 
-		@@include('html/Home/_comments.html',{}) 
-		@@include('html/templates/_latest-posts.html',{}) 
-		@@include('html/templates/_latest-posts-mobile.html',{}) 
-		@@include('html/templates/_latest-posts-mobile.html',{}) 
-		@@include('html/templates/_subscribe.html',{}) 
-
-
-
-
-
-
-
-
-
-
-			
-		</main>
-		@@include('html/footer.html',{})
+		<div class="wrapper">
+			@@include('html/header.html',{})
+			<main>
+			@@include('html/Home/_home-hero.html',{})
+			@@include('html/Home/_home-about.html',{})
+			@@include('html/Home/_home-course.html',{}) 
+			@@include('html/Home/_home-benefits.html',{}) 
+			@@include('html/Home/_home-events.html',{}) 
+			@@include('html/templates/_createx-certificate.html',{}) 
+			@@include('html/Home/_home-team.html',{}) 
+			@@include('html/Home/_comments.html',{}) 
+			@@include('html/templates/_latest-posts.html',{}) 
+			@@include('html/templates/_latest-posts-mobile.html',{}) 
+			@@include('html/templates/_latest-posts-mobile.html',{}) 
+			@@include('html/templates/_subscribe.html',{}) 
+			</main>
+			@@include('html/footer.html',{})
+		</div>
 		<script src="js/app.min.js"></script>
 	</body>
 </html>

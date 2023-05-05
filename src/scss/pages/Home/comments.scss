@@ -1,6 +1,7 @@
 .comments {
     background: #F4F5F7;
     padding-bottom: 100px;
+    padding-top: 8px;
     
     // .comments__wrapper
 
@@ -25,7 +26,7 @@
         background: #fff;
         max-width: 1020px;
         width: 100%;
-        padding: 64px 105px;
+        padding: 64px 165px;
         text-align: left;
         @media(max-width:768px){
             padding: 64px 40px;
@@ -122,7 +123,7 @@
 
 
 .default-section__header{
-    margin-bottom: 60px;
+    margin-bottom: 69px;
 }
 
 }

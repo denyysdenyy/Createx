@@ -3,7 +3,7 @@
         background: url('../../img/Subscribe/bg.png' ) no-repeat right bottom,url('../../img/Subscribe/bg.png' ) no-repeat   left bottom;
     }
     position: relative;
-    padding-top: 120px;
+    padding-top: 124px;
     padding-bottom: 180px;
     text-align: center;
     &:after{
@@ -37,6 +37,8 @@
         padding: 13px 0 13px 16px;
         font-weight: 400;
         font-size: 16px;
+        border: 1px solid #D7DADD;
+        border-radius: 4px;
     }
 
     .default-section {
@@ -44,7 +46,8 @@
         // .default-section__header
     
         &__header {
-            margin-bottom: 60px;
+            gap: 14.5px;
+            margin-bottom: 64px;
         }
     
         // .default-section__header-subtitle
@@ -55,6 +58,7 @@
         // .default-section__header-title
     
         &__header-title {
+            line-height: 57px;
             max-width: 810px;
             width: 100%;
              margin: 0 auto;

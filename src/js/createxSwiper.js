@@ -35,8 +35,8 @@ function createxSwiper(){
                     },
                     1200:{
                         // slidesPerView:4,
-                        spaceBetween:30,
-    
+                        spaceBetween:15,
+                        
                     },
                   }
               });

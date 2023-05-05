@@ -136,6 +136,67 @@
   color: #424551;
 }
 
+@font-face {
+  font-family: "footer-links";
+  src: url("../fonts/footer-links.eot");
+  src: url("../fonts/footer-links.eot") format("embedded-opentype"), url("../fonts/footer-links.ttf") format("truetype"), url("../fonts/footer-links.woff") format("woff"), url("../fonts/footer-links.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=footer-link-], [class*=" footer-link-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "footer-links" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.footer-link-facebook:before, .footer-link-instagram:before, .footer-link-linkedin:before, .footer-link-telegram:before, .footer-link-twitter:before {
+  opacity: 0.6;
+  font-size: 24px;
+  transition: all 250ms ease-in-out;
+}
+.footer-link-facebook:hover::before, .footer-link-instagram:hover::before, .footer-link-linkedin:hover::before, .footer-link-telegram:hover::before, .footer-link-twitter:hover::before {
+  opacity: 1;
+}
+
+.footer-link-youtube:before {
+  content: "\e901";
+  color: #fff;
+}
+
+.footer-link-telegram:before {
+  content: "\e902";
+  color: #fff;
+}
+
+.footer-link-twitter:before {
+  content: "\e903";
+  color: #fff;
+}
+
+.footer-link-instagram:before {
+  content: "\e904";
+  color: #fff;
+}
+
+.footer-link-linkedin:before {
+  content: "\e905";
+  color: #fff;
+}
+
+.footer-link-facebook:before {
+  content: "\e906";
+  color: #fff;
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -223,6 +284,10 @@ h6 {
   font-size: inherit;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-weight: 500;
   font-size: 17px;
@@ -293,7 +358,7 @@ body._lock {
   color: #1E212C;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 20px;
 }
 .default-section__header-subtitle {
   font-weight: 700;
@@ -467,7 +532,7 @@ body._lock {
 
 .subscribe {
   position: relative;
-  padding-top: 120px;
+  padding-top: 124px;
   padding-bottom: 180px;
   text-align: center;
 }
@@ -503,11 +568,15 @@ body._lock {
   padding: 13px 0 13px 16px;
   font-weight: 400;
   font-size: 16px;
+  border: 1px solid #D7DADD;
+  border-radius: 4px;
 }
 .subscribe .default-section__header {
-  margin-bottom: 60px;
+  gap: 14.5px;
+  margin-bottom: 64px;
 }
 .subscribe .default-section__header-title {
+  line-height: 57px;
   max-width: 810px;
   width: 100%;
   margin: 0 auto;
@@ -676,6 +745,118 @@ body._lock {
 }
 .burger.active span:nth-of-type(3) {
   transform: rotateZ(-45deg);
+}
+
+.footer {
+  padding-top: 80px;
+  background: #1E212C;
+  color: #D9D9D9;
+}
+.footer__body {
+  padding-bottom: 60px;
+  display: grid;
+  grid-template-columns: 279px 80px 110px 157px 286px;
+  gap: 80px;
+}
+@media (max-width: 1240px) {
+  .footer__body {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+.footer__subtitle {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  max-width: 279px;
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 38px;
+}
+.footer__social-links {
+  display: flex;
+  gap: 26px;
+}
+.footer__column-title {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+.footer__links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer__links-li a {
+  transition: all 150ms ease-in-out;
+  opacity: 0.6;
+  color: #fff;
+}
+.footer__links-li a:hover {
+  opacity: 1;
+}
+.footer__form {
+  margin-top: 24px;
+  margin-bottom: 12px;
+  position: relative;
+}
+.footer__form-email {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: 9px 0 9px 12px;
+  max-width: 286px;
+  width: 100%;
+  color: #fff;
+}
+.footer__form-btn {
+  background: none;
+  position: absolute;
+  left: 80%;
+  right: 0px;
+  top: 0;
+  max-width: fit-content;
+  bottom: 0;
+  margin: 0 auto;
+}
+@media (max-width: 789px) {
+  .footer__form-btn {
+    left: 57%;
+  }
+}
+@media (max-width: 509px) {
+  .footer__form-btn {
+    left: 100px;
+  }
+}
+.footer__contact-column-message {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 150%;
+}
+.footer__bottom {
+  padding: 19px 0;
+  opacity: 0.5;
+  background-color: #292C37;
+}
+.footer__bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-copyrights {
+  opacity: 1;
+}
+.footer-btn-up {
+  display: none;
+  font-weight: 700;
+  font-size: 14px;
+  opacity: 0.6;
+  color: #fff;
+}
+@media (min-width: 525px) {
+  .footer-btn-up {
+    display: block;
+  }
 }
 
 /* HOME */
@@ -1313,6 +1494,7 @@ body._lock {
 .comments {
   background: #F4F5F7;
   padding-bottom: 100px;
+  padding-top: 8px;
 }
 .comments__wrapper {
   position: relative;
@@ -1329,7 +1511,7 @@ body._lock {
   background: #fff;
   max-width: 1020px;
   width: 100%;
-  padding: 64px 105px;
+  padding: 64px 165px;
   text-align: left;
 }
 @media (max-width: 768px) {
@@ -1410,12 +1592,12 @@ body._lock {
   background-color: #424551;
 }
 .comments .default-section__header {
-  margin-bottom: 60px;
+  margin-bottom: 69px;
 }
 
 .latest-posts {
-  padding-top: 120px;
-  padding-bottom: 180px;
+  padding-top: 181px;
+  padding-bottom: 185px;
   display: none;
 }
 @media (min-width: 1240px) {
@@ -1426,7 +1608,7 @@ body._lock {
 .latest-posts__header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 60px;
+  margin-bottom: 66px;
 }
 @media (max-width: 525px) {
   .latest-posts__header {
@@ -1447,7 +1629,7 @@ body._lock {
 }
 .latest-posts__wrapper {
   position: relative;
-  margin-bottom: 16px;
+  margin-bottom: 21px;
 }
 .latest-posts__info {
   display: flex;
@@ -1461,7 +1643,7 @@ body._lock {
   }
 }
 .latest-posts__discription {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 .latest-posts-genre {
   position: absolute;
@@ -1473,6 +1655,7 @@ body._lock {
 }
 .latest-posts-specialty {
   font-weight: 700;
+  font-size: 14px;
 }
 @media (min-width: 475px) {
   .latest-posts-date {
