@@ -1,0 +1,126 @@
+.courses-course {
+    padding-top: 152px;
+
+    // .courses-course__body
+
+    &__body {
+    }
+
+    // .courses-course__nav
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        margin-bottom: 61px;
+    }
+
+    // .courses-course__categories
+
+    &__categories {
+        display: flex;
+        gap: 12px;
+        margin-right: 103px;
+
+    }
+
+    // .courses-course__categories-btn
+
+    &__categories-btn {
+         padding: 10px 20px;
+        color: #9A9CA5;
+        min-width: 36px;
+        min-height: 46px;
+        border-radius: 4px;
+        background: none;
+        font-weight: 700;
+        &:hover{
+            color: #FF3F3A ;
+            outline: 1px solid #FF3F3A;
+
+        }
+        
+    }
+
+    // .courses-course__form
+
+    &__form {
+        position: relative;
+    }
+
+    // .courses-course__form-search
+
+    &__form-search {
+        width: 30vw; /* 30% от ширины экрана */
+        max-width: 300px; /* максимальная ширина элемента */
+        border: 1px solid #D7DADD;
+        border-radius: 4px;
+        padding: 12px 0 12px 16px;
+        font-weight: 400;
+        font-size: 14px;
+        color: #1E212C;
+        &::placeholder{
+            color: #9A9CA5;
+
+        }
+    }
+
+    // .courses-course__form-btn
+
+    &__form-btn {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        background: none;
+        top: 31%;
+        right: 16px;
+        bottom: 0;
+        &:hover{
+            svg{
+                path{
+                    fill:#FF3F3A;
+                }
+            }
+        }
+    }
+
+    // .courses-course__cards
+
+    &__cards {
+    }
+    .courses-course__card{
+        flex-direction: column;
+        max-width: 390px;
+    }
+    .courses-course__cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+    }
+
+
+    // FiLTER
+    .courses-course__card.hide{
+        display: none;
+    }
+
+
+    
+}
+.default-section {
+
+    // .default-section__header
+
+    &__header {
+    }
+
+    // .default-section__header-subtitle
+
+    &__header-subtitle {
+    }
+
+    // .default-section__header-title
+
+    &__header-title {
+    }
+   
+}

@@ -5,11 +5,6 @@
 .main { 
 	min-height: calc(100vh - 513px); 
 	flex: 1 1 auto; 
-	margin-top: 60px; 
-   
-	@media (max-width: 1200px) { 
-	  margin-top: 80px; 
-	} 
   } 
    
   
@@ -67,9 +62,7 @@
    
   //<ОБОЛОЧКА>=========================================================================================================== 
   .wrapper { 
-	width: 100%; 
 	min-height: 100%; 
-	overflow: hidden; 
 	display: flex; 
 	flex-direction: column; 
   } 
@@ -119,6 +112,9 @@
   @import './pages/Home/home-team.scss';
   @import './pages/Home/comments.scss';
   @import './pages/latest-posts.scss';
+
+  /* COURSES*/
+  @import '../scss/pages/Courses/courses-course.scss';
 
 
 

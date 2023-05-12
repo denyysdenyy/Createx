@@ -5,6 +5,7 @@
     //     const homeCourseSection = document.querySelector('.home-course'),
     //           homeCourseCard = document.querySelectorAll('.home-course__card'),
     //           homeCourseSpeciality = document.querySelectorAll('.home-course__specialty');
+              
     //     if(homeCourseSection){
     //         const url = 'http://localhost:1337/api/createx-courses';
     //             // Получение данных
@@ -44,38 +45,43 @@
        
     // }
 
-    function courseDataQuery(){}
-    const homeCourseSection = document.querySelector('.home-course'),
-    homeCourseCard = document.querySelectorAll('.home-course__card');
-
-    if (homeCourseSection) {
-        const url = 'http://localhost:1337/api/createx-courses?populate=deep&_limit=500';
-      
-        const fetchData = async () => {
-          const response = await fetch(url).catch(console.log("error"))
-          const { data } = await response.json(); 
-
-          data.forEach(({ attributes: { title, price, author, specialty, avatar:{data:{attributes:{url}}}}}, i) => {
-            const markup = `
-              <img src="http://localhost:1337${url}" alt="${author}" class="home-course__card-img">
-              <div class="home-course__body">
-                <h6 class="home-course__card-speciality">${specialty}</h6>
-                <h4 class="home-course__card-title">${title}</h4>
-                <div class="home-course__info">
-                  <p class="home-course__card-price">$${price}</p>
-                  <p class="home-course__card-teacher">by ${author}</p>
-                </div>
-              </div>
-            `;
-      
-            homeCourseCard[i].innerHTML = markup;
+    function courseDataQuery(){
+      const coursesCourseSection = document.querySelector('.courses-course')
+      const homeCourseSection = document.querySelector('.home-course'),
+      homeCourseCard = document.querySelectorAll('.home-course__card');
+  
+      if (homeCourseSection) {
+          const url = 'http://localhost:1337/api/createx-courses?populate=deep&_limit=';
+        
+          const fetchData = async () => {
+            const response = await fetch(url).catch(console.log("error"))
+            const { data } = await response.json(); 
             
-          
-          });
-        };
-      
-        fetchData();
-      }
+            data.forEach(({ attributes: { title, price, author, specialty, avatar:{data:{attributes:{url}}}}}, i) => {
+              
+              const markup = () => {
+                   return `
+                   <img src="http://localhost:1337${url}" alt="${author}" class="home-course__card-img">
+                   <div class="home-course__body">
+                     <h6 class="home-course__card-speciality">${specialty}</h6>
+                     <h4 class="home-course__card-title">${title}</h4>
+                     <div class="home-course__info">
+                       <p class="home-course__card-price">$${price}</p>
+                       <p class="home-course__card-teacher">by ${author}</p>
+                     </div>
+                   </div>
+                 `;
+  
+                } 
+
+                homeCourseCard[i].innerHTML = markup()
+            
+            });
+          };
+        
+          fetchData();
+        }
+    }
     courseDataQuery()
 // ---------------------------------------------------------------------------
 // HOME-EVENTS SECTION
@@ -254,6 +260,59 @@
     }
     getLatestPostsData()
   }
+
+function getCoursesData(){
+  // Получаем ссылки на элементы DOM
+  const url = 'http://localhost:1337/api/createx-courses?populate=deep&_limit=500';
+  const  homeCourseCard = document.querySelectorAll('.home-course__card');
+  const coursesCourseSection = document.querySelector('.courses-course');
+  const coursesCoursCategories = document.querySelector('.courses-course__categories');
+
+  // Загружаем данные курсов с сервера и создаем карточки курсов
+  if(coursesCourseSection){   
+      fetch(url).then(data =>{
+          return data.json()
+      }).then(({data}) =>{
+          
+          data.map(({ attributes: { title, price, author, specialty, avatarL:{data:{attributes:{url}}}}}, i) => {
+               // Создаем элемент карточки курса
+              const card = document.createElement('div');
+              card.classList.add('home-course__card');
+              card.classList.add('courses-course__card');
+              card.dataset.specialty = specialty.toLowerCase();
+
+              // Убираю пробелы в специальностях , чтобы не было ошибок при присваивании класса для card
+
+ 
+              const updateSpecialty = specialty.split(' ').join('')
+              card.classList.add(updateSpecialty)
+
+              // Создаем разметку для карточки курса
+              const markup = ()=>{
+                  return `<img src="http://localhost:1337${url}" alt="${author}" class="home-course__card-img">
+                  <div class="home-course__body">
+                    <h6 class="home-course__card-speciality">${specialty}</h6>
+                    <h4 class="home-course__card-title">${title}</h4>
+                    <div class="home-course__info">
+                      <p class="home-course__card-price">$${price}</p>
+                      <p class="home-course__card-teacher">by ${author}</p>
+                    </div>
+                  </div>`
+              }
+              
+              card.innerHTML = markup()
+              // Добавляем карточку курса в список карточек
+              document.querySelector('.courses-course__cards').appendChild(card)
+          });
+      })
+  }
+
+}
+
+
+getCoursesData()
+
+
  
 
 dataQuery()
