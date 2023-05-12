@@ -1755,6 +1755,9 @@ body._lock {
   flex-direction: column;
   max-width: 390px;
 }
+.courses-course .courses-course__card .home-course__card-title.hide {
+  display: none;
+}
 .courses-course .courses-course__cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

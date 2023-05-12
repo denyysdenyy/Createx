@@ -90,6 +90,9 @@
     .courses-course__card{
         flex-direction: column;
         max-width: 390px;
+        .home-course__card-title.hide{
+            display: none;
+        }
     }
     .courses-course__cards{
         display: grid;
@@ -102,6 +105,7 @@
     .courses-course__card.hide{
         display: none;
     }
+    
 
 
     

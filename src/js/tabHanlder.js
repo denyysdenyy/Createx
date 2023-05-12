@@ -53,7 +53,6 @@ function tabHandler(){
                                 
                             }else{
                                 card.classList.add('hide')
-                                card.removeChild
                             }
                         }
                     })
@@ -68,16 +67,3 @@ function tabHandler(){
 }
 
 tabHandler()
-// if(coursesCourseSection){
-//     const coursesCourseCard = document.querySelectorAll('.courses-course__card')
-//     console.log(coursesCourseCard)
-//     const coursesCoursCategories = document.querySelector('.courses-course__categories');
-//     coursesCoursCategories.addEventListener('click', event =>{
-//         if(event.target.tagName !== 'BUTTON') return false;
-//         let filterClass = event.target.dataset['specialty']
-//         console.log(filterClass);
-//         coursesCourseCard.forEach(elem =>{
-//             elem.classList.add('hide')
-//         })
-//     })
-// }

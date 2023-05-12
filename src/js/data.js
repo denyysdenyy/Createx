@@ -1,5 +1,8 @@
+import { searchBar } from "./searchBar.js";
 
- function  dataQuery(){
+
+
+function  dataQuery(){
     // HOME-COURSE SECTION
     //  function courseDataQuery(){
     //     const homeCourseSection = document.querySelector('.home-course'),
@@ -83,7 +86,7 @@
         }
     }
     courseDataQuery()
-// ---------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // HOME-EVENTS SECTION
 
     function homeEventsDataQuery(){
@@ -132,8 +135,8 @@
         }
     }
     homeEventsDataQuery()
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-      // ---------------------------------------------------------------------------
   // HOME-TEAM SECTION
 
   function getTeamData() {
@@ -202,6 +205,8 @@
       }
     }
     getCommentsData()
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
     // LATEST-POSTS DATA
 
@@ -260,21 +265,25 @@
     }
     getLatestPostsData()
   }
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-function getCoursesData(){
+
+export function getCoursesData(){
   // Получаем ссылки на элементы DOM
   const url = 'http://localhost:1337/api/createx-courses?populate=deep&_limit=500';
   const  homeCourseCard = document.querySelectorAll('.home-course__card');
   const coursesCourseSection = document.querySelector('.courses-course');
   const coursesCoursCategories = document.querySelector('.courses-course__categories');
-
+  let course ={
+    title:'',
+    specialty:''
+  }
   // Загружаем данные курсов с сервера и создаем карточки курсов
   if(coursesCourseSection){   
-      fetch(url).then(data =>{
+      return fetch(url).then(data =>{
           return data.json()
       }).then(({data}) =>{
-          
-          data.map(({ attributes: { title, price, author, specialty, avatarL:{data:{attributes:{url}}}}}, i) => {
+          data.map(({ attributes: { title, price, author, specialty, avatarL:{data:{attributes:{url}}}}}) => {
                // Создаем элемент карточки курса
               const card = document.createElement('div');
               card.classList.add('home-course__card');
@@ -302,16 +311,15 @@ function getCoursesData(){
               
               card.innerHTML = markup()
               // Добавляем карточку курса в список карточек
-              document.querySelector('.courses-course__cards').appendChild(card)
+              document.querySelector('.courses-course__cards').appendChild(card);
+              course.specialty = specialty;
+              course.title = title;
           });
+     
       })
   }
-
 }
-
-
 getCoursesData()
-
 
  
 
