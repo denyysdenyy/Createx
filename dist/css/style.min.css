@@ -1036,6 +1036,7 @@ body._lock {
 
 .home-about {
   padding-top: 184.9px;
+  background: url("../../../img/Home/Home-course/circles.svg") no-repeat 110.2% 95.8%, url("../../../img/Home/Home-course/dots.svg") no-repeat 0% 46.3%;
 }
 .home-about__body {
   display: flex;
@@ -1168,6 +1169,9 @@ body._lock {
   .home-course__card {
     flex-direction: column;
   }
+}
+.home-course__card-img {
+  width: 100%;
 }
 .home-course__card-speciality {
   padding: 4.8px 8.2px;
@@ -1705,11 +1709,13 @@ body._lock {
   display: flex;
   align-items: center;
   margin-bottom: 61px;
+  flex-wrap: wrap;
 }
 .courses-course__categories {
   display: flex;
   gap: 12px;
   margin-right: auto;
+  flex-wrap: wrap;
 }
 .courses-course__categories-btn {
   font-size: 16px;
@@ -1729,6 +1735,7 @@ body._lock {
   position: relative;
 }
 .courses-course__form-search {
+  min-width: 200px;
   transition: all 250ms ease-in-out;
   width: 30vw; /* 30% от ширины экрана */
   max-width: 300px; /* максимальная ширина элемента */
@@ -1761,6 +1768,11 @@ body._lock {
 .courses-course .courses-course__card {
   flex-direction: column;
   max-width: 390px;
+}
+@media (max-width: 425px) {
+  .courses-course .courses-course__card {
+    max-width: 300px;
+  }
 }
 .courses-course .courses-course__card .home-course__card-title.hide {
   display: none;

@@ -12,6 +12,7 @@
         display: flex;
         align-items: center;
         margin-bottom: 61px;
+        flex-wrap: wrap;
     }
 
     // .courses-course__categories
@@ -20,6 +21,7 @@
         display: flex;
         gap: 12px;
         margin-right: auto;
+        flex-wrap: wrap;
     }
 
     // .courses-course__categories-btn
@@ -50,6 +52,7 @@
     // .courses-course__form-search
 
     &__form-search {
+        min-width: 200px;
         &:focus{
         border: 1px solid #FF3F3A;
         border-radius: 12px;
@@ -96,6 +99,9 @@
     .courses-course__card{
         flex-direction: column;
         max-width: 390px;
+        @media(max-width:425px){
+            max-width: 300px;
+        }
         .home-course__card-title.hide{
             display: none;
         }

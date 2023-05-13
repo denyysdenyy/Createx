@@ -1,6 +1,7 @@
 .home-course {
     padding-top: 181px;
     margin-bottom: 182px;
+  
 
     // .home-course__wrapper
 
@@ -75,6 +76,9 @@
         border-radius: 4px;
         width: 100%;
 
+        &-img{
+            width: 100%;
+        }
         &-speciality{
             padding: 4.8px 8.2px;
             background: #03CEA4;
