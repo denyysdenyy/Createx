@@ -1,4 +1,11 @@
 .home-hero {
+    background: url('../../../img/Home/Home-hero/bg/arrow-right-up.svg') no-repeat  4.5% 13.5%,
+                url('../../../img/Home/Home-hero/bg/radius-bg.svg') no-repeat no-repeat -6.7% 112.6%,
+                url('../../../img/Home/Home-hero/bg/dots.svg') no-repeat right 79.4%,
+                url('../../../img/Home/Home-hero/bg/shapes.svg') no-repeat 42.8% 47.3%,
+                url('../../../img/Home/Home-hero/bg/shape.svg')  no-repeat 39.4% 74.4%,
+                url('../../../img/Home/Home-hero/bg/arrow-down-up.svg')  no-repeat 94.6% 0.2%;
+                
     padding-bottom: 87px;
     position: relative;
     &:after{

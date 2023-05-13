@@ -854,6 +854,7 @@ body._lock {
 
 /* HOME */
 .home-hero {
+  background: url("../../../img/Home/Home-hero/bg/arrow-right-up.svg") no-repeat 4.5% 13.5%, url("../../../img/Home/Home-hero/bg/radius-bg.svg") no-repeat no-repeat -6.7% 112.6%, url("../../../img/Home/Home-hero/bg/dots.svg") no-repeat right 79.4%, url("../../../img/Home/Home-hero/bg/shapes.svg") no-repeat 42.8% 47.3%, url("../../../img/Home/Home-hero/bg/shape.svg") no-repeat 39.4% 74.4%, url("../../../img/Home/Home-hero/bg/arrow-down-up.svg") no-repeat 94.6% 0.2%;
   padding-bottom: 87px;
   position: relative;
   padding-top: 227px;
@@ -1698,7 +1699,7 @@ body._lock {
 
 /* COURSES*/
 .courses-course {
-  padding-top: 152px;
+  padding-top: 156.6px;
 }
 .courses-course__nav {
   display: flex;
@@ -1708,9 +1709,10 @@ body._lock {
 .courses-course__categories {
   display: flex;
   gap: 12px;
-  margin-right: 103px;
+  margin-right: auto;
 }
 .courses-course__categories-btn {
+  font-size: 16px;
   padding: 10px 20px;
   color: #9A9CA5;
   min-width: 36px;
@@ -1727,6 +1729,7 @@ body._lock {
   position: relative;
 }
 .courses-course__form-search {
+  transition: all 250ms ease-in-out;
   width: 30vw; /* 30% от ширины экрана */
   max-width: 300px; /* максимальная ширина элемента */
   border: 1px solid #D7DADD;
@@ -1735,6 +1738,10 @@ body._lock {
   font-weight: 400;
   font-size: 14px;
   color: #1E212C;
+}
+.courses-course__form-search:focus {
+  border: 1px solid #FF3F3A;
+  border-radius: 12px;
 }
 .courses-course__form-search::placeholder {
   color: #9A9CA5;
@@ -1760,11 +1767,26 @@ body._lock {
 }
 .courses-course .courses-course__cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(390px, 0fr));
   gap: 30px;
 }
 .courses-course .courses-course__card.hide {
   display: none;
+}
+.courses-course .default-section__header {
+  margin-bottom: 66px;
+}
+.courses-course .empty-cards {
+  text-align: center;
+  display: none;
+}
+.courses-course .empty-cards-title {
+  font-size: 26px;
+  text-transform: uppercase;
+  color: #9A9CA5;
+}
+.courses-course .empty-cards.active {
+  display: block;
 }
 
 .page {

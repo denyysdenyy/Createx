@@ -6,8 +6,10 @@ function searchBarCourses() {
         searchBtn: document.querySelector('.courses-course__form-btn'),
         cardTitle: document.querySelectorAll('.home-course__card-title'),
         card: document.querySelectorAll('.courses-course__card'),
-        cardSpecialty: document.querySelectorAll('.home-course__card-speciality')
+        cardSpecialty: document.querySelectorAll('.home-course__card-speciality'),
+        emptyCourse: document.querySelector('.empty-cards')
       }
+      
     
       domElements.search.addEventListener('input', () => {
         const searchQuery = domElements.search.value.trim().toLowerCase();
@@ -19,8 +21,11 @@ function searchBarCourses() {
     
           if (shouldShow) {
             card.style.display = 'block';
+            domElements.emptyCourse.classList.remove('active')
           } else {
             card.style.display = 'none';
+            domElements.emptyCourse.classList.add('active')
+
           }
         });
       });

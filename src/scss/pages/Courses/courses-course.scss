@@ -1,5 +1,5 @@
 .courses-course {
-    padding-top: 152px;
+    padding-top: 156.6px;
 
     // .courses-course__body
 
@@ -19,13 +19,13 @@
     &__categories {
         display: flex;
         gap: 12px;
-        margin-right: 103px;
-
+        margin-right: auto;
     }
 
     // .courses-course__categories-btn
 
     &__categories-btn {
+        font-size: 16px;
          padding: 10px 20px;
         color: #9A9CA5;
         min-width: 36px;
@@ -50,6 +50,12 @@
     // .courses-course__form-search
 
     &__form-search {
+        &:focus{
+        border: 1px solid #FF3F3A;
+        border-radius: 12px;
+    
+        }
+        transition: all 250ms ease-in-out;
         width: 30vw; /* 30% от ширины экрана */
         max-width: 300px; /* максимальная ширина элемента */
         border: 1px solid #D7DADD;
@@ -96,7 +102,7 @@
     }
     .courses-course__cards{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(390px, 0fr));
         gap: 30px;
     }
 
@@ -106,25 +112,39 @@
         display: none;
     }
     
+    .default-section {
 
+        // .default-section__header
+    
+        &__header {
+            margin-bottom: 66px;
+        }
+    
+        // .default-section__header-subtitle
+    
+        &__header-subtitle {
+        }
+    
+        // .default-section__header-title
+    
+        &__header-title {
+        }
+       
+    }
+    
+
+    .empty-cards{
+        text-align: center;
+        display: none;
+        &-title{
+            font-size: 26px;
+            text-transform: uppercase;
+            color: #9A9CA5; 
+        }
+        &.active{
+            display: block;
+        }
+    }
 
     
-}
-.default-section {
-
-    // .default-section__header
-
-    &__header {
-    }
-
-    // .default-section__header-subtitle
-
-    &__header-subtitle {
-    }
-
-    // .default-section__header-title
-
-    &__header-title {
-    }
-   
 }
