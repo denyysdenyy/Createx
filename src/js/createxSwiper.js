@@ -1,8 +1,6 @@
 import Swiper, { Navigation,Autoplay,Pagination} from 'swiper';
 
-
-
-function createxSwiper(){
+async function createxSwiper(){
 
     function homeTeamSwiper(){
         const homeTeamSeciton = document.querySelector('.home-team')
@@ -91,4 +89,4 @@ function createxSwiper(){
     latestPostsMobileSwiper()
 }
 
-createxSwiper()
+export default createxSwiper

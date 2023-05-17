@@ -1,13 +1,14 @@
-function searchBarCourses() {
+ function searchBarCourses() {
     const courseCoursesSection = document.querySelector('.courses-course');
     if (courseCoursesSection) {
+      
       const domElements = {
-        search: document.querySelector('.courses-course__form-search'),
-        searchBtn: document.querySelector('.courses-course__form-btn'),
+        search: document.querySelector('.search-input'),
+        searchBtn: document.querySelector('.search-btn'),
         cardTitle: document.querySelectorAll('.home-course__card-title'),
         card: document.querySelectorAll('.courses-course__card'),
         cardSpecialty: document.querySelectorAll('.home-course__card-speciality'),
-        emptyCourse: document.querySelector('.empty-cards')
+        // emptyCourse: document.querySelector('.empty-cards')
       }
       
     
@@ -21,10 +22,10 @@ function searchBarCourses() {
     
           if (shouldShow) {
             card.style.display = 'block';
-            domElements.emptyCourse.classList.remove('active')
+            // domElements.emptyCourse.classList.remove('active')
           } else {
             card.style.display = 'none';
-            domElements.emptyCourse.classList.add('active')
+            // domElements.emptyCourse.classList.add('active')
 
           }
         });
@@ -32,7 +33,7 @@ function searchBarCourses() {
     }
   }
   
-  setTimeout(searchBarCourses, 200);  
+setTimeout(searchBarCourses,200);
 
 
 

@@ -1,0 +1,45 @@
+
+.search {
+    position: relative;
+
+
+    &-input{
+        min-width: 200px;
+        &:focus{
+        border: 1px solid #FF3F3A;
+        border-radius: 12px;
+    
+        }
+        transition: all 250ms ease-in-out;
+        width: 30vw; /* 30% от ширины экрана */
+        max-width: 300px; /* максимальная ширина элемента */
+        border: 1px solid #D7DADD;
+        border-radius: 4px;
+        padding: 12px 0 12px 16px;
+        font-weight: 400;
+        font-size: 14px;
+        color: #1E212C;
+        &::placeholder{
+            color: #9A9CA5;
+
+        }
+    }
+
+
+    &-btn {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        background: none;
+        top: 31%;
+        right: 16px;
+        bottom: 0;
+        &:hover{
+            svg{
+                path{
+                    fill:#FF3F3A;
+                }
+            }
+        }
+    }
+}

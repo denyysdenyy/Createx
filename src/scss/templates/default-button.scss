@@ -24,5 +24,12 @@
         -webkit-text-fill-color: transparent;
         background-clip: text;
         text-fill-color: transparent;
+        &:hover{
+                background-color: #f2f2f2 ; /* новый цвет фона при наведении */
+                -webkit-text-fill-color: transparent; /* сохранение стиля текста */
+                text-fill-color: transparent;
+                background-clip: text;
+                -webkit-background-clip: text;
+            }
     }
 }

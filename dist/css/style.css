@@ -346,6 +346,13 @@ body._lock {
   background-clip: text;
   text-fill-color: transparent;
 }
+.default-button-second:hover {
+  background-color: #f2f2f2; /* новый цвет фона при наведении */
+  -webkit-text-fill-color: transparent; /* сохранение стиля текста */
+  text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
 
 .default-section__header {
   color: #1E212C;
@@ -370,6 +377,46 @@ body._lock {
   background: red;
 }
 
+.search {
+  position: relative;
+}
+.search-input {
+  min-width: 200px;
+  transition: all 250ms ease-in-out;
+  width: 30vw; /* 30% от ширины экрана */
+  max-width: 300px; /* максимальная ширина элемента */
+  border: 1px solid #D7DADD;
+  border-radius: 4px;
+  padding: 12px 0 12px 16px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #1E212C;
+}
+.search-input:focus {
+  border: 1px solid #FF3F3A;
+  border-radius: 12px;
+}
+.search-input::placeholder {
+  color: #9A9CA5;
+}
+.search-btn {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background: none;
+  top: 31%;
+  right: 16px;
+  bottom: 0;
+}
+.search-btn:hover svg path {
+  fill: #FF3F3A;
+}
+
+.events {
+  display: grid;
+  row-gap: 26px;
+  margin-bottom: 63px;
+}
 .events__card {
   background: #FFFFFF;
   border-radius: 4px;
@@ -393,13 +440,6 @@ body._lock {
   transition: all 400ms ease-in-out;
   max-height: 44px;
   text-align: center;
-}
-.events__card .default-button-second:hover {
-  background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
 }
 .events__info {
   display: flex;
@@ -1170,9 +1210,6 @@ body._lock {
     flex-direction: column;
   }
 }
-.home-course__card-img {
-  width: 100%;
-}
 .home-course__card-speciality {
   padding: 4.8px 8.2px;
   background: #03CEA4;
@@ -1731,39 +1768,19 @@ body._lock {
   color: #FF3F3A;
   outline: 1px solid #FF3F3A;
 }
-.courses-course__form {
-  position: relative;
+.courses-course__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(390px, 0fr));
+  gap: 30px;
 }
-.courses-course__form-search {
-  min-width: 200px;
-  transition: all 250ms ease-in-out;
-  width: 30vw; /* 30% от ширины экрана */
-  max-width: 300px; /* максимальная ширина элемента */
-  border: 1px solid #D7DADD;
-  border-radius: 4px;
-  padding: 12px 0 12px 16px;
-  font-weight: 400;
-  font-size: 14px;
-  color: #1E212C;
+@media (max-width: 839px) {
+  .courses-course__cards {
+    justify-content: center;
+    place-items: center;
+  }
 }
-.courses-course__form-search:focus {
-  border: 1px solid #FF3F3A;
-  border-radius: 12px;
-}
-.courses-course__form-search::placeholder {
-  color: #9A9CA5;
-}
-.courses-course__form-btn {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  background: none;
-  top: 31%;
-  right: 16px;
-  bottom: 0;
-}
-.courses-course__form-btn:hover svg path {
-  fill: #FF3F3A;
+.courses-course__cards .home-course__card-img {
+  width: 100%;
 }
 .courses-course .courses-course__card {
   flex-direction: column;
@@ -1776,11 +1793,6 @@ body._lock {
 }
 .courses-course .courses-course__card .home-course__card-title.hide {
   display: none;
-}
-.courses-course .courses-course__cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(390px, 0fr));
-  gap: 30px;
 }
 .courses-course .courses-course__card.hide {
   display: none;
@@ -1802,6 +1814,88 @@ body._lock {
 }
 
 /* EVENTS*/
+.events-lectures {
+  padding-top: 152px;
+}
+.events-lectures__sort {
+  margin-bottom: 60px;
+  display: flex;
+  gap: 37px;
+  justify-content: center;
+}
+@media (min-width: 769px) {
+  .events-lectures__sort {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {
+  .events-lectures__sort {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
+.events-lectures__sort-themes {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.events-lectures__sort-title {
+  font-weight: 700;
+  font-size: 16px;
+  color: #424551;
+}
+.events-lectures__sort-select {
+  min-width: 160px;
+  border: 1px solid #D7DADD;
+  border-radius: 4px;
+  padding: 14px 16px;
+  min-height: 44px;
+}
+.events-lectures__sort-time {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.events-lectures__sort-pagecount {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.events-lectures__sort-pagecount-number {
+  padding: 14px 16px;
+  min-width: 72px;
+  border: 1px solid #D7DADD;
+  border-radius: 4px;
+  background: none;
+}
+.events-lectures__sort-pagecount-subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  color: #787A80;
+}
+.events-lectures__sort-search {
+  position: relative;
+  align-items: center;
+}
+.events-lectures__sort-view {
+  display: flex;
+  align-items: center;
+}
+.events-lectures .search {
+  position: relative;
+}
+.events-lectures .default-section__header {
+  margin-bottom: 60px;
+}
+.events-lectures .events__card {
+  border: 1px solid #E5E8ED;
+  border-radius: 4px;
+}
+.events-lectures .events__card.hide {
+  display: none;
+}
+
 .page {
   flex: 1 1 auto;
 }

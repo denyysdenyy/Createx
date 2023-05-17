@@ -1,8 +1,7 @@
 .events {
-
-
-    // .events__card
-
+      display: grid;
+        row-gap: 26px;
+        margin-bottom: 63px;
     &__card {
         background: #FFFFFF;
         border-radius: 4px;
@@ -25,13 +24,7 @@
             max-height: 44px;
             text-align: center;
                
-            &:hover{
-                background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-                text-fill-color: transparent;
-            }
+         
         }
         
     }
