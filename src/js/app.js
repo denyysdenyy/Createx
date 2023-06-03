@@ -24,7 +24,8 @@ import tabEvents from "./tabs/Events/tabEvents.js"
 // SWIPER
 import createxSwiper from './createxSwiper.js';
 // SEARCH
-import searchBarCourses from "./searchBar.js";
+import searchBarCourses from "./searchBar/Course/searchBar.js";
+import searchBarEvents from "./searchBar/Events/searchBarEvents.js"
 
 // SORT
 import sort from "./sort.js";

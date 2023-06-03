@@ -59,11 +59,12 @@
                     
              
                     
-                        const changeStart  = start.split('').splice(0,5).join(''),
-                              changeFinish = finish.split('').splice(0,5).join('') ;
+                    const changeStart  = start.split('').splice(0,5).join(''),
+                    changeFinish = finish.split('').splice(0,5).join('') ,
+                    changeDate = date.split('').splice(8,3).join('')
                          const markup = () =>{
                              return `<div class="events__info">
-                             <p class="events-number">${formattedDate}</p>
+                             <p class="events-number">${changeDate}</p>
                              <div class="events__date">
                                  <p class="events-month">${month}</p>
                                  <p class="events-time">${changeStart}-${changeFinish}</p>
