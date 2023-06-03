@@ -18,14 +18,14 @@
     "subtitle": {
       "type": "string"
     },
+    "date": {
+      "type": "date"
+    },
     "start": {
       "type": "time"
     },
     "finish": {
       "type": "time"
-    },
-    "date": {
-      "type": "decimal"
     },
     "month": {
       "type": "string"

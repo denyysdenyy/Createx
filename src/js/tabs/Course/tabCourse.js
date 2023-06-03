@@ -4,6 +4,7 @@
   
        const buttons = document.querySelectorAll('.courses-course__categories-btn');
        const courseCards = document.querySelectorAll('.courses-course__card');
+       
        buttons.forEach(btn =>{
             btn.addEventListener('click', (e) =>{
                 const filter = e.target.dataset.specialty;

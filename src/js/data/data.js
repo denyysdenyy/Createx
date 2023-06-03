@@ -277,19 +277,23 @@
         return data.json()
       }).then(({data})=>{
         
-        data.forEach(({attributes:{date,month,start,finish,title,subtitle}},i) =>{
+        data.forEach(({attributes:{date,start,month,finish,title,subtitle}},i) =>{
+          // console.log(date,start,finish)
           const lecturesCard = document.createElement('div')
-
+          lecturesCard.dataset.subtitle = subtitle.toLowerCase()
 
           lecturesCard.classList.add('events__card')
+          // lecturesCard.dataset.number = date;
 
-          const formattedDate = date <= 9 ? `0${date}` : date;
+          
           const changeStart  = start.split('').splice(0,5).join(''),
-              changeFinish = finish.split('').splice(0,5).join('') ;
+              changeFinish = finish.split('').splice(0,5).join('') ,
+              changeDate = date.split('').splice(8,3).join('')
+
 
           const markup = () =>{
             return `<div class="events__info">
-            <p class="events-number">${formattedDate}</p>
+            <p class="events-number">${changeDate}</p>
             <div class="events__date">
                 <p class="events-month">${month}</p>
                 <p class="events-time">${changeStart}-${changeFinish}</p>

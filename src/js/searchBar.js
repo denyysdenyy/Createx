@@ -1,4 +1,4 @@
- function searchBarCourses() {
+  function searchBarCourses() {
     const courseCoursesSection = document.querySelector('.courses-course');
     if (courseCoursesSection) {
       
@@ -33,8 +33,7 @@
     }
   }
   
-setTimeout(searchBarCourses,200);
-
+setTimeout(searchBarCourses,100)
 
 
 
