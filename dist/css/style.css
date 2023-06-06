@@ -340,18 +340,13 @@ body._lock {
   border: 1px solid #F75E05;
   font-size: 16px;
   letter-spacing: 0.5px;
-  background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
+  color: #F75E05;
 }
-.default-button-second:hover {
-  background-color: #f2f2f2; /* новый цвет фона при наведении */
-  -webkit-text-fill-color: transparent; /* сохранение стиля текста */
-  text-fill-color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
+@media (min-width: 1024px) {
+  .default-button-second:hover {
+    color: #FFFFFF;
+    background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+  }
 }
 
 .default-section__header {
@@ -417,6 +412,11 @@ body._lock {
   row-gap: 26px;
   margin-bottom: 63px;
 }
+.events.row {
+  grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+  place-content: center;
+  gap: 30px;
+}
 .events__card {
   background: #FFFFFF;
   border-radius: 4px;
@@ -425,8 +425,10 @@ body._lock {
   gap: 40px;
   transition: all 400ms ease-in-out;
 }
-.events__card:hover {
-  box-shadow: 0px 80px 80px -20px rgba(255, 63, 58, 0.16), 0px 30px 24px -10px rgba(255, 63, 58, 0.1), 0px 12px 10px -6px rgba(255, 63, 58, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+@media (min-width: 1024px) {
+  .events__card:hover {
+    box-shadow: 0px 80px 80px -20px rgba(255, 63, 58, 0.16), 0px 30px 24px -10px rgba(255, 63, 58, 0.1), 0px 12px 10px -6px rgba(255, 63, 58, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+  }
 }
 @media (max-width: 768px) {
   .events__card {
@@ -440,6 +442,19 @@ body._lock {
   transition: all 400ms ease-in-out;
   max-height: 44px;
   text-align: center;
+}
+.events__card.row {
+  flex-direction: column;
+}
+.events__card.row .default-button-second {
+  width: 100%;
+  margin-top: auto;
+}
+.events__card.row .events-info {
+  margin-top: auto;
+}
+.events__card.row .events-title {
+  line-height: 27px;
 }
 .events__info {
   display: flex;
@@ -1881,6 +1896,20 @@ body._lock {
 .events-lectures__sort-view {
   display: flex;
   align-items: center;
+  gap: 5px;
+}
+.events-lectures__sort-view .view-btn {
+  cursor: pointer;
+}
+.events-lectures__sort-view .view-btn:hover svg path {
+  transition: all 0.15s ease-in-out;
+  fill: #FF3F3A;
+}
+.events-lectures__sort-view #sort-view-column.active svg path {
+  fill: #FF3F3A;
+}
+.events-lectures__sort-view #sort-view-row.active svg path {
+  fill: #FF3F3A;
 }
 .events-lectures .search {
   position: relative;

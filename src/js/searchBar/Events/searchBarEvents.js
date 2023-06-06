@@ -1,6 +1,5 @@
 function searchBarEvents(){
     const eventsSection = document.querySelector('.events-lectures');
-    console.log(eventsSection)
     if(eventsSection){
         const domElements = {
             search:document.querySelector('.search-input'),

@@ -111,6 +111,33 @@
     &__sort-view {
         display: flex;
         align-items: center;
+        gap: 5px;
+        .view-btn{
+            cursor: pointer;
+            &:hover{
+                svg{
+                    path{
+                        transition: all .15s ease-in-out;
+                        fill: #FF3F3A;
+                    }
+                }
+            }
+        }
+
+        #sort-view-column.active{
+            svg{
+                path{
+                    fill: #FF3F3A;
+                }
+            }
+        }
+        #sort-view-row.active{
+            svg{
+                path{
+                    fill: #FF3F3A;
+                }
+            }
+        }
     }
 
     .search {

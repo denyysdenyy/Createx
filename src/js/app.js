@@ -19,7 +19,7 @@ import CountNumbers from './countNumbers.js';
 // TABS
 import tabCourses from "./tabs/Course/tabCourse.js";
 import tabBenefit from "./tabs/Home/tabBenefit.js";
-import tabEvents from "./tabs/Events/tabEvents.js"
+import tabEvents from "./tabs/Events/tabEvents.js";
 
 // SWIPER
 import createxSwiper from './createxSwiper.js';
@@ -29,6 +29,9 @@ import searchBarEvents from "./searchBar/Events/searchBarEvents.js"
 
 // SORT
 import sort from "./sort.js";
+
+// SWITCH DIRECTION
+import switchDirection from "./switchDirection.js"
 
 
   
