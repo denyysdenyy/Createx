@@ -1,54 +1,41 @@
 function sort() {
-    const eventsLectures = document.querySelector('.events-lectures');
-    const eventsCard = document.querySelectorAll('.events__card');
-    const eventsSortSelectDate = document.getElementById('events-date-sort');
-    const eventsCardWrapper = document.querySelector('.events');
-    const eventsCardMonth = document.querySelectorAll('.events-month');
-  
-    if (eventsLectures) {
-      function selectHandler() {
-        eventsSortSelectDate.addEventListener('change', () => {
-          const getValue = eventsSortSelectDate.value;
-          if (getValue === 'latest') {
-            sortCards();
-          }
-        });
-      }
-      selectHandler();
-  
-      function sortCards() {
-        let numArr = Array.from(eventsCard); // Преобразовываем NodeList в массив
-        numArr.sort((a, b) => {
-          const aMonth = a.querySelector('.events-month').innerText.toLowerCase(); // Получаем месяц из карточки A
-          const bMonth = b.querySelector('.events-month').innerText.toLowerCase(); // Получаем месяц из карточки B
-          const aNumber = +a.dataset.number; // Получаем число из карточки A
-          const bNumber = +b.dataset.number; // Получаем число из карточки B
-  
-          // Сравниваем месяцы с учетом порядка
-          if (aMonth < bMonth) {
-            return -1;
-          } else if (aMonth > bMonth) {
-            return 1;
-          } else {
-            // Если месяцы равны, сравниваем числа
-            if (aNumber < bNumber) {
-              return -1;
-            } else if (aNumber > bNumber) {
-              return 1;
-            } else {
-              return 0;
-            }
-          }
-        });
-  
-        // Очищаем обертку карточек и добавляем отсортированные карточки
-        eventsCardWrapper.innerHTML = '';
-        numArr.forEach((elem) => {
-          eventsCardWrapper.appendChild(elem);
-        });
-      }
+  const eventsLectures = document.querySelector('.events-lectures');
+  const eventsCard = document.querySelectorAll('.events__card');
+  const eventsSortSelectDate = document.getElementById('events-date-sort');
+  const eventsCardWrapper = document.querySelector('.events');
+  const eventsCardMonth = document.querySelectorAll('.events-month');
+
+  if (eventsLectures) {
+    function selectHandler() {
+      eventsSortSelectDate.addEventListener('change', () => {
+        const getValue = eventsSortSelectDate.value;
+        if (getValue === 'latest') {
+          sortCards();
+        }
+      });
+    }
+    selectHandler();
+
+    function sortCards() {
+      let numArr = Array.from(eventsCard); // Convert NodeList to array
+
+      // Custom comparison function for sorting by date
+      const compareByDate = (a, b) => {
+        const aDate = new Date(a.dataset.date);
+        const bDate = new Date(b.dataset.date);
+        return aDate - bDate;
+      };
+
+      // Sort the array using the compareByDate function
+      numArr.sort(compareByDate);
+
+      // Clear the card wrapper and add the sorted cards
+      eventsCardWrapper.innerHTML = '';
+      numArr.forEach((elem) => {
+        eventsCardWrapper.appendChild(elem);
+      });
     }
   }
-  
-  
-setTimeout(sort,200)
+}
+
+setTimeout(sort, 200);

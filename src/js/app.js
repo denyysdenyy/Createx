@@ -25,14 +25,16 @@ import tabEvents from "./tabs/Events/tabEvents.js";
 import createxSwiper from './createxSwiper.js';
 // SEARCH
 import searchBarCourses from "./searchBar/Course/searchBar.js";
-import searchBarEvents from "./searchBar/Events/searchBarEvents.js"
+import searchBarEvents from "./searchBar/Events/searchBarEvents.js";
 
 // SORT
 import sort from "./sort.js";
 
 // SWITCH DIRECTION
-import switchDirection from "./switchDirection.js"
+import switchDirection from "./switchDirection.js";
 
+// Lectures Quantity
+import changeLecturesQuantity from './changeLecturesQuantity.js';
 
   
  
