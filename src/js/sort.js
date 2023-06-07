@@ -17,24 +17,32 @@ function sort() {
     selectHandler();
 
     function sortCards() {
-      let numArr = Array.from(eventsCard); // Convert NodeList to array
-
-      // Custom comparison function for sorting by date
-      const compareByDate = (a, b) => {
-        const aDate = new Date(a.dataset.date);
-        const bDate = new Date(b.dataset.date);
-        return aDate - bDate;
-      };
-
-      // Sort the array using the compareByDate function
-      numArr.sort(compareByDate);
-
-      // Clear the card wrapper and add the sorted cards
+      let numArr = Array.from(eventsCard); // Преобразовываем NodeList в массив
+      numArr.sort((a, b) => {
+        const aMonth = a.querySelector('.events-month').innerText.toLowerCase(); // Получаем месяц из карточки A
+        const bMonth = b.querySelector('.events-month').innerText.toLowerCase(); // Получаем месяц из карточки B
+        const aNumber = +a.dataset.number; // Получаем число из карточки A
+        const bNumber = +b.dataset.number; // Получаем число из карточки B
+        
+        // Сравниваем месяцы с учетом порядка
+        if (aMonth < bMonth) {
+          return -1;
+        } else if (aMonth > bMonth) {
+          return 1;
+        } else {
+          // Если месяцы равны, сравниваем числа
+          return aNumber - bNumber;
+        }
+      });
+    
+      // Очищаем обертку карточек и добавляем отсортированные карточки
       eventsCardWrapper.innerHTML = '';
-      numArr.forEach((elem) => {
+      numArr.forEach(elem => {
         eventsCardWrapper.appendChild(elem);
       });
     }
+    
+    
   }
 }
 

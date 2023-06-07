@@ -36,6 +36,9 @@ import switchDirection from "./switchDirection.js";
 // Lectures Quantity
 import changeLecturesQuantity from './changeLecturesQuantity.js';
 
+// Authorization
+import authorization from "./auth.js";
+
   
  
 async function go(){

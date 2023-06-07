@@ -16,6 +16,7 @@
 	"license": "ISC",
 	"dependencies": {
 		"aos": "^2.3.4",
+		"axios": "^1.4.0",
 		"countup.js": "^2.6.0",
 		"gulp-cli": "^2.3.0",
 		"strapi-plugin-populate-deep": "^2.0.0",
