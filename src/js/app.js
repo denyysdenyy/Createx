@@ -37,7 +37,7 @@ import switchDirection from "./switchDirection.js";
 import changeLecturesQuantity from './changeLecturesQuantity.js';
 
 // Authorization
-import authorization from "./auth.js";
+import authorization from "./authorization.js";
 
   
  
