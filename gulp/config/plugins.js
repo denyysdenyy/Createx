@@ -14,3 +14,4 @@ export const plugins = {
 	newer: newer,
 	if: ifPlugin
 }
+

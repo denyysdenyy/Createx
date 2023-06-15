@@ -14,7 +14,9 @@ function authorization(){
     authCLose = document.querySelector('.authorization__close'),
     dontHaveAccountBtn = document.getElementById('dontHaveAccountBtn'),
     haveAccountBtn = document.getElementById('haveAccountBtn'),
-    registerForm = document.getElementById('registerForm');
+    registerForm = document.getElementById('registerForm'),
+    loginForm = document.getElementById('loginForm'),
+    providersBlock = document.querySelector('.authorization__providers');
 
         // Элементы формы регистрации
     const registerFormElements = {
@@ -39,11 +41,12 @@ function authorization(){
     authCLose.addEventListener('click',()=>{
         closeAuth()
     })
-
-    // Функция закрывания auth 
     function closeAuth(){
         auth.classList.remove('active')
     }
+
+    
+    
 
     
     
@@ -99,27 +102,67 @@ function authorization(){
     // Отработка события формы регистрации 
     registerForm.addEventListener('submit',(e)=>{
         e.preventDefault();
-        
         signUp()
     })
+
+    loginForm.addEventListener('submit',(e)=>{
+        e.preventDefault();
+        signIn()
+    })
+    
+    
+
  
 
     
 
       // ЛОГИН ФОРМА 
     function signIn(){
-     
+
+        const loginFormElements = {
+            email: document.getElementById('authorization-login-email').value,
+            password: document.getElementById('authorization-login-password').value,
+        }
+
+        axios
+        .post('http://localhost:1337/api/auth/local', {
+          identifier: loginFormElements.email,
+          password: loginFormElements.password,
+        })
+        .then(response => {
+          // Handle success.
+          console.log('Well done!');
+          console.log('User profile', response.data.user);
+          console.log('User token', response.data.jwt);
+          document.getElementById('authorization-login-email').value = '',
+          document.getElementById('authorization-login-password').value = ''
+        })
+        .catch(error => {
+          // Handle error.
+          console.log('An error occurred:', error.response);
+        });
+
+
     }
+
+
+
 
     // РЕГИСТРАЦИЯ ФОРМА
     function signUp(){
        
+        const registerFormElements = {
+            fullName: document.getElementById('authorization-register-name').value,
+            email:  document.getElementById('authorization-register-email').value,
+            password: document.getElementById('authorization-register-password').value,
+            confirmPassword: document.getElementById('authorization-register-confirm-password').value
+        }
 
-        // Проверка пароля на совпадение
-        if(registerFormElements.confirmPassword !== registerFormElements.password){
-          return false
-        } 
-
+    // Проверка пароля на совпадение
+    if(registerFormElements.confirmPassword !== registerFormElements.password){
+        return false
+    } 
+    
       
 
         
@@ -135,23 +178,42 @@ function authorization(){
                 console.log('Well done!');
                 console.log('User profile', response.data.user);
                 console.log('User token', response.data.jwt),
-                console.log(`User Password: ${response.data.password}`);
                 // Закрытие секции регистрации 
-
                 closeAuth()
                 // Очищение полей фформы
                 document.getElementById('authorization-register-name').value = '';
                 document.getElementById('authorization-register-email').value = '';
                 document.getElementById('authorization-register-password').value = '';
                 document.getElementById('authorization-register-confirm-password').value = '';
-
-
+                succesRegistration()
             })
             .catch(error => {
                 // Handle error.
                 console.log('An error occurred:', error.response);
             });
+
+             // Функция показа успешной регистрации
+             function succesRegistration(){
+                authRegisterBody.innerHTML = '';
+
+                const successTitle = document.createElement('h2');
+                const succesEmail = document.createElement('h3')
+                successTitle.textContent = 'Thanks for join!'
+                successTitle.style.fontSize = '26px';
+                successTitle.style.marginBottom = '16px';
+                succesEmail.style.fontSize = '22px';
+                succesEmail.textContent = 'Check your mail!'
+
+               authRegisterBody.appendChild(successTitle);
+               authRegisterBody.appendChild(succesEmail)
+               providersBlock.style.display = 'none'
+               setTimeout(closeAuth,5000)
             }
+            }
+
+
+
+
 }   
 }
 
