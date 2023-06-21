@@ -1,7 +1,6 @@
 async function tabBenefit(){
     const homeBenefitsSection = document.querySelector('.home-benefits')
     if(homeBenefitsSection){
-       console.log('homebenefit')
        const tabBtn = document.querySelectorAll('.home-benefits__nav-btn');
        const tabsContent = document.querySelectorAll('.home-benefits__tab-content');
        

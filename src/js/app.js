@@ -1,8 +1,7 @@
 import * as flsFunctions from "./modules/functions.js";
 import AOS from 'aos';
-flsFunctions.isWebp();
-
-
+flsFunctions.isWebp();  
+    
 // Animation
 AOS.init();
 
@@ -38,6 +37,10 @@ import changeLecturesQuantity from './changeLecturesQuantity.js';
 
 // Authorization
 import authorization from "./authorization.js";
+
+// EMAIL
+
+
 
   
  

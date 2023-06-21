@@ -100,9 +100,9 @@ function authorization(){
 
 
     // Отработка события формы регистрации 
-    registerForm.addEventListener('submit',(e)=>{
-        e.preventDefault();
-        signUp()
+    registerForm.addEventListener('submit', async (e)=>{
+       let a = await e.preventDefault();
+        let b = await signUp()
     })
 
     loginForm.addEventListener('submit',(e)=>{
@@ -211,6 +211,10 @@ function authorization(){
             }
             }
 
+
+
+            // Отправка письма после регистрации 
+            
 
 
 
