@@ -100,14 +100,15 @@ function authorization(){
 
 
     // Отработка события формы регистрации 
-    registerForm.addEventListener('submit', async (e)=>{
-       let a = await e.preventDefault();
-        let b = await signUp()
+    registerForm.addEventListener('submit',  (e)=>{
+       e.preventDefault();
+         signUp()
     })
 
     loginForm.addEventListener('submit',(e)=>{
         e.preventDefault();
         signIn()
+        
     })
     
     
@@ -158,10 +159,10 @@ function authorization(){
             confirmPassword: document.getElementById('authorization-register-confirm-password').value
         }
 
-    // Проверка пароля на совпадение
-    if(registerFormElements.confirmPassword !== registerFormElements.password){
-        return false
-    } 
+        // Проверка пароля на совпадение
+        if(registerFormElements.confirmPassword !== registerFormElements.password){
+            return false
+        } 
     
       
 
@@ -211,10 +212,6 @@ function authorization(){
             }
             }
 
-
-
-            // Отправка письма после регистрации 
-            
 
 
 

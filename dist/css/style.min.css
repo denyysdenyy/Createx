@@ -466,7 +466,6 @@ body._lock {
   display: block;
 }
 .authorization__wrapper {
-  top: 213px;
   padding: 24px 48px 50px 48px;
   display: flex;
   flex-direction: column;
@@ -474,7 +473,6 @@ body._lock {
   align-items: center;
   background-color: #fff;
   position: relative;
-  left: 39%;
   max-width: 486px;
   width: 100%;
   border: 1px solid #E5E8ED;
@@ -482,6 +480,10 @@ body._lock {
   border-radius: 4px;
   color: #424551;
   font-size: 14px;
+  top: 213px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 .authorization__close {
   right: 11px;
@@ -950,7 +952,7 @@ body._lock {
 @media (max-width: 1200px) {
   .header__links {
     flex-direction: column;
-    gap: 10px;
+    gap: 25px;
     margin: unset;
   }
 }
@@ -983,6 +985,7 @@ body._lock {
 }
 @media (max-width: 1200px) {
   .header__account {
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -1007,6 +1010,15 @@ body._lock {
 @media (max-width: 1200px) {
   .header__login, .header__signup, .header span {
     color: #fff;
+  }
+}
+
+.createx-icon-account {
+  display: none;
+}
+@media (min-width: 1201px) {
+  .createx-icon-account {
+    display: block;
   }
 }
 
@@ -1466,6 +1478,7 @@ body._lock {
   box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
   border-radius: 4px;
   width: 100%;
+  cursor: pointer;
 }
 @media (min-width: 991px) {
   .home-course__card:hover {
@@ -2175,6 +2188,9 @@ body._lock {
 }
 .events-lectures .events__card.hide {
   display: none;
+}
+.events-lectures .events__card .default-button-second {
+  text-wrap: nowrap;
 }
 
 .page {
