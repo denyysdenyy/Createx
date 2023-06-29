@@ -16,15 +16,11 @@ function authorization(){
     haveAccountBtn = document.getElementById('haveAccountBtn'),
     registerForm = document.getElementById('registerForm'),
     loginForm = document.getElementById('loginForm'),
-    providersBlock = document.querySelector('.authorization__providers');
+    providersBlock = document.querySelector('.authorization__providers'),
+    createxIconAccount = document.querySelector('.createx-icon-account'),
+    invalidMessage = document.querySelector('.authorization__invalid');
 
-        // Элементы формы регистрации
-    const registerFormElements = {
-        fullName: document.getElementById('authorization-register-name').value,
-        email:  document.getElementById('authorization-register-email').value,
-        password: document.getElementById('authorization-register-password').value,
-        confirmPassword: document.getElementById('authorization-register-confirm-password').value
-    }
+
 
     dontHaveAccountBtn.addEventListener('click',()=>{
         authRegisterBody.classList.add('active')
@@ -45,6 +41,10 @@ function authorization(){
         auth.classList.remove('active')
     }
 
+   
+    
+
+
     
     
 
@@ -57,6 +57,7 @@ function authorization(){
         auth.classList.add('active')
         authRegisterBody.classList.remove('active')
         authLoginBody.classList.add('active')
+        
 
     })
     // Если нажать на Register , то откроется Register  и закроется login
@@ -103,14 +104,16 @@ function authorization(){
     registerForm.addEventListener('submit',  (e)=>{
        e.preventDefault();
          signUp()
-    })
-
-    loginForm.addEventListener('submit',(e)=>{
-        e.preventDefault();
-        signIn()
         
     })
+
+
     
+        loginForm.addEventListener('submit',(e)=>{
+        e.preventDefault();
+        signIn()
+    })
+
     
 
  
@@ -124,29 +127,47 @@ function authorization(){
             email: document.getElementById('authorization-login-email').value,
             password: document.getElementById('authorization-login-password').value,
         }
-
+        
         axios
         .post('http://localhost:1337/api/auth/local', {
           identifier: loginFormElements.email,
           password: loginFormElements.password,
         })
+
+        // THEN
         .then(response => {
           // Handle success.
-          console.log('Well done!');
-          console.log('User profile', response.data.user);
-          console.log('User token', response.data.jwt);
+         console.log(`Success log in :`, response.data.user)
+        //   Очистка полей формы
           document.getElementById('authorization-login-email').value = '',
           document.getElementById('authorization-login-password').value = ''
+          // Если user авторизовался , то появляется иконка кнопки учетной записи
+          authBtnsHadnlerCLose()
+        //   Появление иконки учетной запичи
+          createxIconAccount.style.display = 'block'
+        //   Сохранение данных в LS
+          localStorage.setItem('userData',JSON.stringify(loginFormElements))
+        // Восстановление данных LS
+      
+        closeAuth()
         })
+
+        // CATCH
         .catch(error => {
           // Handle error.
-          console.log('An error occurred:', error.response);
+          console.log('Login Error:', error.response);
+
+          invalidMessage.classList.add('active')
+          
         });
 
 
     }
-
-
+    function authBtnsHadnlerCLose(){
+        authBtnLogin.style.display = 'none'
+        authBtnRegister.style.display = 'none'
+    }
+ 
 
 
     // РЕГИСТРАЦИЯ ФОРМА
@@ -179,9 +200,7 @@ function authorization(){
                 console.log('Well done!');
                 console.log('User profile', response.data.user);
                 console.log('User token', response.data.jwt),
-                // Закрытие секции регистрации 
-                closeAuth()
-                // Очищение полей фформы
+                // Очищение полей формы
                 document.getElementById('authorization-register-name').value = '';
                 document.getElementById('authorization-register-email').value = '';
                 document.getElementById('authorization-register-password').value = '';
@@ -190,7 +209,7 @@ function authorization(){
             })
             .catch(error => {
                 // Handle error.
-                console.log('An error occurred:', error.response);
+                console.log('Sign Up error:', error.response);
             });
 
              // Функция показа успешной регистрации
@@ -208,12 +227,12 @@ function authorization(){
                authRegisterBody.appendChild(successTitle);
                authRegisterBody.appendChild(succesEmail)
                providersBlock.style.display = 'none'
+                // Закрытие секции регистрации 
                setTimeout(closeAuth,5000)
             }
             }
 
-
-
+          
 
 }   
 }

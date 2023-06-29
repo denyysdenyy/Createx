@@ -1,9 +1,11 @@
 .courses-course {
     padding-top: 156.6px;
+    padding-bottom: 120px;  
 
     // .courses-course__body
 
     &__body {
+        margin-bottom: 80px;
     }
 
     // .courses-course__nav
@@ -56,6 +58,11 @@
         }
     }
     .courses-course__card{
+        &.hidden{
+            opacity: 0;
+            height: 0;
+            visibility: hidden;
+        }
         flex-direction: column;
         max-width: 390px;
         @media(max-width:425px){
@@ -92,17 +99,37 @@
        
     }
     
-
-    .empty-cards{
+    &__load{
         text-align: center;
-        display: none;
-        &-title{
-            font-size: 26px;
-            text-transform: uppercase;
-            color: #9A9CA5; 
-        }
-        &.active{
-            display: block;
+       
+        &-btn{
+            font-size: 16px;
+            font-weight: 700;
+            background: none;
+            transition: all 300ms ease-in-out;
+            svg{
+                &.active{
+                    animation: rotateLoad 300ms forwards;
+                }
+            }
+            &:hover{
+                color: #FF4242;
+                svg{
+                   
+                        path{
+                            fill: #FF4242;
+                        }
+                }
+            }
+            @keyframes rotateLoad {
+                0%{
+                    transform: rotate(35deg);
+                }
+                100%{
+                    transform: rotate(-35deg);
+
+                }
+            }
         }
     }
 

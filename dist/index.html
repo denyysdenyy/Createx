@@ -11,6 +11,17 @@
 	<title>Createx</title>
 </head>
 	<body >
+		<div class="mask">
+    <div class="loader">
+        <svg 
+  class="ring"
+  viewBox="25 25 50 50"
+  stroke-width="5"
+>
+  <circle cx="50" cy="50" r="20" />
+</svg>
+    </div>
+</div> 
 		<div class="wrapper">
 			<header id="header" class="header">
   <div class="_container">
@@ -28,10 +39,10 @@
         <div class="header__account">
           <div class="createx-icon-account"></div>
           <button id="signIn" class="header__login">Log in</button>
-          <span>/</span>
-          <button id="signUp" class="header__signup">Register</button>
+          <button id="signUp" class="header__signup">Sign Up</button>
         </div>
       </nav>
+    
       <div class="burger">
         <span></span>
         <span></span>
@@ -54,6 +65,10 @@
         <div class="authorization__header">
             <h2 class="authorization__header-title">Sign in</h2>
             <h3 class="authorization__header-subtitle">Sign in to your account using email and password provided during registration.</h3>
+        </div>
+
+        <div class="authorization__invalid">
+            <p class="authorization__invalid-message">Wrond password or email</p>
         </div>
         <!-- ФОРМА -->
         <form action="" id="loginForm"  class="authorization__form">
@@ -299,7 +314,7 @@
     </div>
     <div class="home-events__footer">
         <h5 class="home-events__subtitle">Do you want more?</h5>
-        <a href="#" class="default-button">Explore all events</a>
+        <a href="_events.html" class="default-button">Explore all events</a>
     </div>
 </section> 
 			<section class="createx-certificate">

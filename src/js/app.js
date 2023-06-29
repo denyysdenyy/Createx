@@ -5,6 +5,9 @@ flsFunctions.isWebp();
 // Animation
 AOS.init();
 
+const body  = document.querySelector('body')
+body.classList.add('_lock')
+
 
 // DATA
 import dataQuery from "./data/data.js";
@@ -40,7 +43,12 @@ import authorization from "./authorization.js";
 
 // EMAIL
 
+// LOADER
+import * as loader from './loader.js'
 
+// LOADMORE
+
+import * as loadMore from './tabs/Course/loadMore.js'
 
   
  
