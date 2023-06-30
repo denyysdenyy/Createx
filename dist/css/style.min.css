@@ -2155,6 +2155,8 @@ body._lock {
   margin-bottom: 66px;
 }
 .courses-course__load {
+  display: flex;
+  justify-content: center;
   text-align: center;
 }
 .courses-course__load-btn {
@@ -2165,6 +2167,9 @@ body._lock {
 }
 .courses-course__load-btn svg.active {
   animation: rotateLoad 300ms forwards;
+}
+.courses-course__load-btn svg path {
+  transition: all 300ms ease-in-out;
 }
 .courses-course__load-btn:hover {
   color: #FF4242;
@@ -2279,6 +2284,182 @@ body._lock {
 }
 .events-lectures .events__card .default-button-second {
   text-wrap: nowrap;
+}
+
+/* ProductPage*/
+.hero {
+  padding-bottom: 120px;
+  padding-top: 192px;
+  position: relative;
+}
+.hero:after {
+  content: "";
+  background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+.hero .default-section__header-subtitle {
+  color: var(--primary, #FF3F3A);
+}
+.hero .default-section__header-title {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.course-info {
+  padding-top: 120px;
+}
+.course-info__content {
+  display: flex;
+  align-items: center;
+  gap: 134px;
+}
+@media (max-width: 768px) {
+  .course-info__content {
+    flex-direction: column;
+    gap: 80px;
+    text-align: justify;
+  }
+}
+.course-info__about {
+  margin-bottom: 48px;
+}
+.course-info__about-title {
+  font-size: 46px;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+.course-info__about-discription {
+  color: var(--gray-800, #424551);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  max-width: 600px;
+  width: 100%;
+}
+.course-info__about-benefits-title {
+  font-size: 28px;
+  margin-bottom: 24px;
+}
+.course-info__about-benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.course-info__about-benefits-list li {
+  position: relative;
+  color: var(--gray-800, #424551);
+  font-size: 16px;
+}
+.course-info__about-benefits-list li::before {
+  content: url(../../../img/Home/Home-about/home-about-list-type.svg);
+  top: 3px;
+  position: relative;
+  margin-right: 16px;
+}
+.course-info__content-sidebar {
+  max-width: 495px;
+  border-radius: 4px;
+  border: 1px solid var(--gray-300, #E5E8ED);
+  background: #fff;
+  padding: 40px 32px;
+  box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+}
+.course-info__content-sidebar-row {
+  margin-bottom: 32px;
+}
+.course-info__content-sidebar-row:nth-of-type(3) {
+  margin-bottom: 40px;
+}
+.course-info__content-sidebar-title {
+  color: var(--gray-900, #1E212C);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.course-info__content-sidebar-month {
+  color: var(--primary, #FF3F3A);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.course-info__content-sidebar-subtitle {
+  color: var(--gray-700, #787A80);
+  font-size: 16px;
+  font-weight: 400;
+}
+.course-info .default-button {
+  display: block;
+  text-align: center;
+}
+
+.curator {
+  padding-top: 200px;
+}
+.curator__content {
+  display: flex;
+  gap: 135px;
+}
+@media (max-width: 991px) {
+  .curator__content {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+}
+.curator__title {
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.curator__fullname {
+  margin-bottom: 16px;
+  font-size: 46px;
+  font-weight: 900;
+}
+.curator__position {
+  margin-bottom: 32px;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--gray-700, #787A80);
+}
+.curator__detail {
+  margin-bottom: 4px;
+  color: var(--gray-800, #424551);
+  font-size: 16px;
+  font-weight: 700;
+}
+.curator__detail:nth-of-type(3) {
+  margin-bottom: 32px;
+}
+.curator__discription {
+  margin-bottom: 40px;
+  color: var(--gray-800, #424551);
+  font-size: 16px;
+  font-weight: 400;
+  max-width: 600px;
+  line-height: 160%;
+}
+.curator__img-wrapper {
+  max-width: 485px;
+  border-radius: 4px;
+  background: var(--secondary, #FFCF2D);
+  max-height: 600px;
+  padding: 0 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+.curator-img {
+  width: 100%;
 }
 
 .page {

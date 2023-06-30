@@ -102,7 +102,6 @@
    
   @import "./pages/header.scss"; 
   @import "./pages/footer.scss"; 
-  // @import "burger"; 
 
 /* HOME */
   @import './pages/Home/home-hero.scss';
@@ -119,6 +118,12 @@
 
   /* EVENTS*/
   @import '../scss/pages/Events/events-lectures.scss';
+
+  /* ProductPage*/
+
+  @import '../scss//templates/ProductPage/hero.scss';
+  @import '../scss//templates/ProductPage/course-info.scss';
+  @import '../scss//templates/ProductPage/curator.scss';
 
 
 

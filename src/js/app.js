@@ -50,6 +50,10 @@ import * as loader from './loader.js'
 
 import * as loadMore from './tabs/Course/loadMore.js'
 
+// GENERATE COURSE PAGE
+
+import generateCoursePage from './generateCoursePage.js'
+
   
  
 async function go(){

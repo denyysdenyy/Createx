@@ -100,6 +100,8 @@
     }
     
     &__load{
+        display: flex;
+        justify-content: center;
         text-align: center;
        
         &-btn{
@@ -110,6 +112,9 @@
             svg{
                 &.active{
                     animation: rotateLoad 300ms forwards;
+                }
+                path{
+                    transition: all 300ms ease-in-out;
                 }
             }
             &:hover{
