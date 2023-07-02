@@ -4,13 +4,15 @@
 	"title":"Events"
 	})
 	<body >
-		<!-- @@include('html/templates/_loader.html',{})  -->
+		@@include('html/templates/_loader.html',{}) 
 		<div class="wrapper">
 			@@include('html/header.html',{})
 			<main class="main">
+				@@include('html/templates/_auth.html',{}) 
 				@@include('html/templates/ProductPage/_hero.html',{})
 				@@include('html/templates/ProductPage/_course-info.html',{})
 				@@include('html/templates/ProductPage/_curator.html',{})
+				@@include('html/templates/ProductPage/_steps.html',{})
 
 			</main>
 			@@include('html/footer.html',{})

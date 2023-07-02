@@ -54,6 +54,9 @@ import * as loadMore from './tabs/Course/loadMore.js'
 
 import generateCoursePage from './generateCoursePage.js'
 
+// STEPS
+import stepUp from './steps.js'
+
   
  
 async function go(){
