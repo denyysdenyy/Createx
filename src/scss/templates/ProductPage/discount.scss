@@ -1,0 +1,130 @@
+.discount {
+    // .discount__wrapper
+    margin-top: 180px;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        padding: 48px 60px;
+        position: relative;
+        border-radius: 4px;
+        &:after{
+            content: "";
+            background: var(--btn-gradient, linear-gradient(45deg, #FF3F3A 0%, #F75E05 100%));
+            opacity: 0.2;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;   
+            };
+    }
+
+    // .discount__header
+
+    &__header{
+        display: flex;
+        margin-bottom: 26px;
+        @media(max-width:991px){
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+    }
+    
+
+    // .discount-title
+
+    &-title{
+        color: var(--gray-900, #1E212C);
+        font-size: 46px;
+        font-weight: 900;
+        @media(max-width:525px){
+            font-size: 30px;
+        }
+    }
+
+    // .discount-input
+
+    &-input{
+        padding: 11px 0 11px 16px;
+        max-width: 291px;
+        width: 100%;
+        &::placeholder{
+            color: var(--gray-600, #9A9CA5);
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+
+
+    // .discount__time
+
+    &__time {
+        display: flex;
+        margin-left: auto;
+        @media(max-width:991px){
+            margin-left: unset;
+        }
+        align-items: center;
+        gap: 24px;
+    }
+
+    // .discount__column
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    // .discount__time-num
+
+    &__time-num {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    // .discount__time-subtitle
+
+    &__time-subtitle {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    // .discount__form
+
+    &__form {
+        
+        display: flex;
+        align-items: baseline;
+        
+        @media(max-width:991px){
+            align-items: center;
+            flex-direction: column;
+            gap: 15px;
+        }
+        label{
+            color: var(--gray-800, #424551);
+            font-size: 14px;
+            font-weight: 400;
+        }
+        &-column{
+            gap: 8px;
+            display: flex;
+            flex-direction: column;
+            max-width: 291px;
+            width: 100%;
+            margin-right: 24px;
+            &:nth-of-type(3){
+                margin-right: 22px;
+            }
+        }
+    }
+    .default-button{
+        white-space: nowrap;
+    }
+}
+

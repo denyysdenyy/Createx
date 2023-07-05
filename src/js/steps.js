@@ -14,9 +14,10 @@ function stepUp(){
                 if (previousIndex >= 0) {
                   stepsCardsNumber[previousIndex].classList.remove('active');
                 }
-          
+                stepsCardsNumber[i].style.color = '#FF3F3A'
                 stepsCardsNumber[i].classList.add('active');
                 stepsCardsLine[i].classList.add('active');
+                
           
                 previousIndex = i;
 

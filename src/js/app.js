@@ -57,6 +57,15 @@ import generateCoursePage from './generateCoursePage.js'
 // STEPS
 import stepUp from './steps.js'
 
+// DISCOUNT TIMER
+
+import discountTimer from './discount.js'
+
+// ACCORDION
+
+import accordion from './accordion.js'
+
+
   
  
 async function go(){
