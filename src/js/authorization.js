@@ -77,7 +77,7 @@ function authorization(){
   
 
     // Показ пароля
-    const showPassBtn = document.getElementById('showPassword');;
+    const showPassBtn = document.getElementById('showPassword');
     const showConfirmPassBtn = document.getElementById('showConfirmPassword');
     showPassBtn.addEventListener('click',showPassword)
     showConfirmPassBtn.addEventListener('click',showConfirmPassword);
@@ -171,68 +171,91 @@ function authorization(){
 
 
     // РЕГИСТРАЦИЯ ФОРМА
-    function signUp(){
-       
-        const registerFormElements = {
-            fullName: document.getElementById('authorization-register-name').value,
-            email:  document.getElementById('authorization-register-email').value,
-            password: document.getElementById('authorization-register-password').value,
-            confirmPassword: document.getElementById('authorization-register-confirm-password').value
-        }
-
-        // Проверка пароля на совпадение
-        if(registerFormElements.confirmPassword !== registerFormElements.password){
-            return false
-        } 
-    
-      
-
+        function signUp(){
         
-        axios
-            .post('http://localhost:1337/api/auth/local/register', {
-                username: registerFormElements.fullName,
-                email: registerFormElements.email,
-                password: registerFormElements.password,
-                
-            })
-            .then(response => {
-                // Handle success.
-                console.log('Well done!');
-                console.log('User profile', response.data.user);
-                console.log('User token', response.data.jwt),
-                // Очищение полей формы
-                document.getElementById('authorization-register-name').value = '';
-                document.getElementById('authorization-register-email').value = '';
-                document.getElementById('authorization-register-password').value = '';
-                document.getElementById('authorization-register-confirm-password').value = '';
-                succesRegistration()
-            })
-            .catch(error => {
-                // Handle error.
-                console.log('Sign Up error:', error.response);
-            });
-
-             // Функция показа успешной регистрации
-             function succesRegistration(){
-                authRegisterBody.innerHTML = '';
-
-                const successTitle = document.createElement('h2');
-                const succesEmail = document.createElement('h3')
-                successTitle.textContent = 'Thanks for join!'
-                successTitle.style.fontSize = '26px';
-                successTitle.style.marginBottom = '16px';
-                succesEmail.style.fontSize = '22px';
-                succesEmail.textContent = 'Check your mail!'
-
-               authRegisterBody.appendChild(successTitle);
-               authRegisterBody.appendChild(succesEmail)
-               providersBlock.style.display = 'none'
-                // Закрытие секции регистрации 
-               setTimeout(closeAuth,5000)
-            }
+            const registerFormElements = {
+                fullName: document.getElementById('authorization-register-name').value,
+                email:  document.getElementById('authorization-register-email').value,
+                password: document.getElementById('authorization-register-password').value,
+                confirmPassword: document.getElementById('authorization-register-confirm-password').value
             }
 
-          
+            // Проверка пароля на совпадение
+            if(registerFormElements.confirmPassword !== registerFormElements.password){
+                return false
+            } 
+        
+        
+
+            
+            axios
+                .post('http://localhost:1337/api/auth/local/register', {
+                    username: registerFormElements.fullName,
+                    email: registerFormElements.email,
+                    password: registerFormElements.password,
+                    
+                })
+                .then(response => {
+
+                    let formData = {
+                        username: registerFormElements.fullName,
+                        email:registerFormElements.email,
+                    }
+
+                    let xhr = new XMLHttpRequest();
+                    xhr.open('POST',`http://localhost:4050/send-email`);
+                    xhr.setRequestHeader('content-type','application/json');
+                    xhr.onload = function(){
+                        console.log(this.responseText)
+                        if(xhr.responseText == 'success'){
+                            alert('Email sent')
+                        }
+                        else{
+                            console.log('Something wrong')
+                        }
+                    }
+                    xhr.send(JSON.stringify(formData))
+
+                    
+                    // Handle success.
+                    console.log('Well done!');
+                    console.log('User profile', response.data.user);
+                    console.log('User token', response.data.jwt),
+                    // Очищение полей формы
+                    document.getElementById('authorization-register-name').value = '';
+                    document.getElementById('authorization-register-email').value = '';
+                    document.getElementById('authorization-register-password').value = '';
+                    document.getElementById('authorization-register-confirm-password').value = '';
+                    succesRegistration()
+
+                    
+                    
+                })
+                .catch(error => {
+                    // Handle error.
+                    console.log('Sign Up error:', error.response);
+                });
+                // Функция показа успешной регистрации
+                function succesRegistration(){
+                    authRegisterBody.innerHTML = '';
+
+                    const successTitle = document.createElement('h2');
+                    const succesEmail = document.createElement('h3')
+                    successTitle.textContent = 'Thanks for join!'
+                    successTitle.style.fontSize = '26px';
+                    successTitle.style.marginBottom = '16px';
+                    succesEmail.style.fontSize = '22px';
+                    succesEmail.textContent = 'Check your mail!'
+
+                authRegisterBody.appendChild(successTitle);
+                authRegisterBody.appendChild(succesEmail)
+                providersBlock.style.display = 'none'
+                    // Закрытие секции регистрации 
+                setTimeout(closeAuth,5000)
+                alert('Sign up success')
+                }
+                }
+
 
 }   
 }

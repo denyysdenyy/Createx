@@ -2466,6 +2466,9 @@ body._lock {
   width: 100%;
 }
 
+.steps {
+  padding-top: 180px;
+}
 .steps__flex {
   display: flex;
   gap: 30px;
@@ -2606,7 +2609,6 @@ body._lock {
 .discount__wrapper {
   display: flex;
   flex-direction: column;
-  align-items: baseline;
   padding: 48px 60px;
   position: relative;
   border-radius: 4px;
@@ -2706,6 +2708,12 @@ body._lock {
 }
 .discount .default-button {
   white-space: nowrap;
+  align-self: end;
+}
+@media (max-width: 991px) {
+  .discount .default-button {
+    align-self: center;
+  }
 }
 
 .plan {

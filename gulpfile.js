@@ -4,6 +4,14 @@ import gulp from "gulp";
 import { path } from "./gulp/config/path.js";
 // Импорт общих плагинов
 import { plugins } from "./gulp/config/plugins.js";
+import { createProxyMiddleware } from "http-proxy-middleware";
+
+
+
+import express from 'express';
+import nodemailer from 'nodemailer';
+
+
 
 // Передаем значения в глобальную переменную
 global.app = {
@@ -55,6 +63,31 @@ export { build }
 export { deployZIP }
 export { deployFTP }
 
+
+
+// ...
+
+function serve() {
+  browserSync.init({
+    server: {
+      baseDir: 'dist',
+      middleware: [
+        createProxyMiddleware('/api', {
+          target: 'http://localhost:4050',
+          changeOrigin: true,
+        }),
+      ],
+    },
+  });
+}
+
+// ...
+
+
 // Выполнение сценария по умолчанию
 gulp.task('default', dev);
+
+
+
+
 
