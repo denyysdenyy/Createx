@@ -13,19 +13,24 @@ app.use(cors());
 
 app.post('/send-email',(req,res)=>{
   const transporter = nodemailer.createTransport({
-    host: 'smtp-relay.sendinblue.com',
+    host: 'smtp.gmail.com',
     port: 587,
     secure: false,
     auth: {
-      user: 'denyysitbelikov@gmail.com',
-      pass: 'IB4nWf0NZJO8HA5L'
+      user: 'denyysbelikov@gmail.com',
+      pass: 'omwatdoqlwzgytda'
     }
   });
   const mailOptions = {
     from: req.body.email,
     to: req.body.email,
     subject: `Welcome to our family , ${req.body.username}`,
-    text: `Hello ${req.body.username}`
+    html: `<h2 style="font-size:12">Welcome, ${req.body.username}!</h2><br>
+
+    <p>Welcome to Createx! We are delighted that you have registered with us. Createx is an innovative online course platform that will help you develop your skills and unleash your creative potential. We offer a wide range of courses, experts, and the opportunity to interact with other students. We are ready to assist you in achieving your goals and aspirations. Welcome to Createx!</p> <br>
+    
+    <p>Best regards,</p> <br>
+    <p>The Createx Team </p>`
   };
   
   transporter.sendMail(mailOptions, (error, info) => {

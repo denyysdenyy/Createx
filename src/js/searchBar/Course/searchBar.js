@@ -1,4 +1,4 @@
-  function searchBarCourses() {
+async  function searchBarCourses() {
     const courseCoursesSection = document.querySelector('.courses-course');
     if (courseCoursesSection) {
       

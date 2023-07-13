@@ -200,6 +200,7 @@ function authorization(){
                     let formData = {
                         username: registerFormElements.fullName,
                         email:registerFormElements.email,
+                        password:registerFormElements.password
                     }
 
                     let xhr = new XMLHttpRequest();
