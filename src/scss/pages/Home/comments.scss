@@ -1,0 +1,130 @@
+.comments {
+    background: #F4F5F7;
+    padding-bottom: 100px;
+    padding-top: 80px;
+    
+    // .comments__wrapper
+
+    &__wrapper {
+        position: relative;
+    }
+
+    // .comments__swiper
+
+    &__swiper {
+        box-sizing: border-box;
+        width: 100%;
+        overflow: hidden;
+        text-align: -webkit-center;
+    }
+
+    // .comments__card
+
+    &__card {
+        box-shadow: 0px 80px 80px rgba(154, 156, 165, 0.08), 0px 30px 24px rgba(154, 156, 165, 0.05), 0px 12px 10px rgba(154, 156, 165, 0.04), 0px 4px 4px rgba(30, 33, 44, 0.03);
+        border-radius: 4px;
+        background: #fff;
+        max-width: 1020px;
+        width: 100%;
+        padding: 64px 165px;
+        text-align: left;
+        @media(max-width:768px){
+            padding: 64px 40px;
+        }
+        @media(max-width:425px){
+            padding: 64px 25px;
+        }
+    }
+
+    // .comments__text
+
+    &__text {
+        max-width: 752px;
+        width: 100%;
+        quotes: '<';
+        position: relative;
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 24px;
+        @media(max-width:1024px){
+            &::before{
+                position: absolute;
+                content: '"';
+                font-size: 124px;
+                font-size: 119px;
+                color: #FF3F3A;
+                @media(min-width:768px){
+                    left: -55px;
+                    top: 35px;
+                }
+            }
+        }
+    }
+
+    // .comments__profile
+
+    &__profile {
+        display: flex;
+        align-items: center;
+    }
+
+    // .comments__avatar
+
+    &__avatar {
+        cursor: pointer;
+        transition: all 350ms ease-in-out;
+        &:hover{
+            transform: scale(1.3);
+        }
+        margin-right: 20px;
+    }
+
+    // .comments__user-info
+
+    &__user-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .comments__user-name
+
+    &__user-name {
+        margin-bottom: 6px; 
+        font-weight: 700;
+        font-size: 16px;
+        color: #1E212C;
+    }
+
+    // .comments__user-position
+
+    &__user-position {
+        color: #787A80;
+    }
+
+
+    &-swiper-button-prev,&-swiper-button-next{
+        top: 60%;
+        z-index: 2;
+    }
+    &-swiper-button-next{
+        right: 0;
+    }  
+    .swiper-pagination{
+        bottom: -60px !important;
+    }
+    .swiper-pagination-bullet{
+        width: 30px;
+        border-radius: 3px;
+        height: 3px;
+        &-active{
+            background-color: #424551;
+        }
+}
+
+
+.default-section__header{
+    margin-bottom: 69px;
+}
+
+}
+

@@ -1,0 +1,170 @@
+.events-lectures {
+    padding-top: 152px;
+
+    // .events-lectures__body
+
+    // &__body {
+    // }
+
+    // .events-lectures__sort
+
+    &__sort {
+        margin-bottom: 60px;
+        display: flex;
+        gap: 37px;
+        justify-content: center;
+        @media(min-width:769px){
+            flex-wrap: wrap;
+        }
+        @media(max-width:768px){
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+    }
+
+
+
+    // .event-lectures__sort-themes
+
+    &__sort-themes {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    // .event-lectures__sort-title
+
+    &__sort-title {
+        font-weight: 700;
+        font-size: 16px;
+        color: #424551
+    }
+
+    // .event-lectures__sort-select
+
+    &__sort-select {
+        min-width: 160px;
+        border: 1px solid #D7DADD;
+        border-radius: 4px;
+        padding: 14px 16px;
+        min-height: 44px;
+    }
+
+    // .event-lectures__sort-themes-option
+
+    // &__sort-themes-option {
+    // }
+
+    // .event-lectures__sort-time
+
+    &__sort-time {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+ 
+ 
+    // .event-lectures__sort-time-option
+
+    // &__sort-time-option {
+    // }
+
+    // .event-lectures__sort-pagecount
+
+    &__sort-pagecount {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+    }
+
+
+    // .event-lectures__sort-pagecount-number
+
+    &__sort-pagecount-number {
+        padding: 14px 16px;
+        min-width: 72px;
+        border: 1px solid #D7DADD;
+        border-radius: 4px;
+        background: none;
+    }
+
+    // .event-lectures__sort-pagecount-subtitle
+
+    &__sort-pagecount-subtitle {
+        font-weight: 400;
+        font-size: 14px;
+        color: #787A80;
+    }
+
+    // .event-lectures__sort-search
+
+    &__sort-search {
+        position: relative;
+        align-items: center;
+    }
+
+    // .event-lectures__sort-view
+
+    &__sort-view {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        .view-btn{
+            cursor: pointer;
+            &:hover{
+                svg{
+                    path{
+                        transition: all .15s ease-in-out;
+                        fill: #FF3F3A;
+                    }
+                }
+            }
+        }
+
+        #sort-view-column.active{
+            svg{
+                path{
+                    fill: #FF3F3A;
+                }
+            }
+        }
+        #sort-view-row.active{
+            svg{
+                path{
+                    fill: #FF3F3A;
+                }
+            }
+        }
+    }
+
+    .search {
+        position: relative;
+    }
+
+    .default-section {
+
+        // .default-section__header
+    
+        &__header {
+            margin-bottom: 60px;
+        }
+    
+    }
+    .events__card{
+        border: 1px solid #E5E8ED;
+        border-radius: 4px;
+        &.hide{
+            display: none;
+        }
+
+        .default-button-second{
+            text-wrap: nowrap
+        }
+    }
+   
+   
+    
+}

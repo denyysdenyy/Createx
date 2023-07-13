@@ -1,0 +1,38 @@
+.hero {
+    padding-bottom: 120px;
+    padding-top: 192px;
+    position: relative;
+    &:after{
+        content: "";
+        background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+        opacity: 0.2;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;   
+        };
+    .default-section {
+
+		// .default-section__header
+
+		&__header {
+		}
+
+		// .default-section__header-subtitle
+
+		&__header-subtitle {
+            color: var(--primary, #FF3F3A);
+		}
+
+		// .default-section__header-title
+
+		&__header-title {
+            max-width: 1020px;
+            margin: 0 auto;
+		}
+}
+
+}
+

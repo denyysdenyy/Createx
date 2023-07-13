@@ -1,0 +1,114 @@
+.home-benefits {
+    margin-bottom: 120px;
+
+    // .home-benefits__tabs
+
+    &__tabs {
+    }
+
+    // .home-benefits__nav-menu
+
+    &__nav-menu {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        margin-bottom: 65px;
+        @media(max-width:768px){
+            place-items: center;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    // .home-benefits__nav-btn
+
+    &__nav-btn {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        box-sizing: border-box;
+        background: none;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        color: #9A9CA5;
+        padding: 10px;
+      
+        @media(min-width:991px){
+            &:hover{
+                color: #FF3F3A;
+                outline: 1px solid #FF3F3A;
+                border-radius: 4px;
+                *{
+                    fill: red
+                }
+            }
+        };
+        &.active{
+            color: #FF3F3A;
+            outline: 1px solid #FF3F3A;
+            border-radius: 4px;
+            *{
+                fill: red
+            }
+        }
+    }
+  
+    // .home-benefits__tab
+
+    &__tab {
+        display: flex;
+        flex-direction: column;
+        gap: 29px;
+       
+    }
+
+    // .home-benefits__tab-content
+
+    &__tab-content {
+        align-items: center;
+        gap: 135px;
+        display: none;
+        @media(max-width:991px){
+            flex-direction: column;
+        }
+    }
+    &__tab-content.active{
+        display: flex;
+    }
+
+    // .home-benefits__tab-content
+
+    &__tab-body{
+        display: flex;
+        flex-direction: column;
+        gap: 30.5px;
+    }
+
+    // .home-benefits__tab-title
+
+    &__tab-title {
+        font-weight: 900;
+        font-size: 32px;
+    }
+    // .home-benefits__tab-discription
+
+    &__tab-discription {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        color: #424551;
+        max-width: 495px;
+        width: 100%;
+    }
+
+    // .home-benefits__tab-logo
+
+    &__tab-logo {
+        @media(max-width:768px){
+            width: 100%;
+        }
+    }
+    .default-section__header{
+        margin-bottom: 71px;
+        gap: 19px;
+    }
+}

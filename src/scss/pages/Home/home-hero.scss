@@ -1,0 +1,211 @@
+.home-hero {
+    background: url('../../../img/Home/Home-hero/bg/arrow-right-up.svg') no-repeat  4.5% 13.5%,
+                url('../../../img/Home/Home-hero/bg/radius-bg.svg') no-repeat no-repeat -6.7% 112.6%,
+                url('../../../img/Home/Home-hero/bg/dots.svg') no-repeat right 79.4%,
+                url('../../../img/Home/Home-hero/bg/shapes.svg') no-repeat 42.8% 47.3%,
+                url('../../../img/Home/Home-hero/bg/shape.svg')  no-repeat 39.4% 74.4%,
+                url('../../../img/Home/Home-hero/bg/arrow-down-up.svg')  no-repeat 94.6% 0.2%;
+                
+    padding-bottom: 87px;
+    position: relative;
+    &:after{
+    content: "";
+    background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+    };
+    padding-top: 227px;
+    // .home-hero__wrapper
+
+    &__wrapper {
+    }
+    // .home-hero-img
+
+    
+    // .home-hero__body
+    
+    &__body {
+       
+        position: relative;
+        display: flex;
+        margin-bottom: 263.5px;
+        @media(max-width:1440px){
+            justify-content: space-between;
+        }
+        @media(max-width:991px){
+            text-align: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 61.7px;
+            margin-bottom: 60.5px;
+
+        }
+    }
+    
+    &__content{
+        display: flex;
+        flex-direction: column;
+        @media(max-width:991px){
+            align-items: center;
+            
+        }
+    }
+
+    // .home-hero-logo
+
+    &-img{
+        display: none;
+        @media(min-width: 425px){
+            display: block;
+        }
+        @media(min-width:1440px){
+            position: absolute;
+            right: -4%;
+            bottom: -15.5%;
+        }
+        
+        @media(max-width:1200px){
+            position: relative;
+            width: 45%;
+        }
+    }
+    
+    // .home-hero__showreel
+
+    &__showreel {
+        display: flex;
+        align-items: center;
+        gap: 18.6px;
+        font-size: 14px;
+        margin-bottom: 36px;
+    }
+    
+    // .home-hero-btn
+
+    &-btn{
+        background: #FF3F3A;
+        padding: 18px;
+        border-radius: 50%;
+        position: relative;
+        &::before{
+         content: '';
+         background: black;
+         position: absolute;
+         width: 50px;
+         padding: 18px;
+         left: 0;
+         top: 0;
+         right: 0;
+         bottom: 0;
+         border-radius: 50%;
+         z-index: -1;
+        }
+        svg{
+         width: 16px;
+         height: 16px;
+        }
+    }
+
+    // .home-hero-title
+
+    &-title{
+        font-weight: 900;
+        font-size: 64px;
+        line-height: 130%;
+        letter-spacing: 1px;
+        max-width: 496px;
+        margin-bottom: 60px;
+        @media(max-width:768px){
+            font-size: 49px;
+            letter-spacing: unset;
+
+        }
+    }
+
+    .default-button {
+        padding: 18px 38.9px;
+        &-second{
+            padding: 18px 40px;
+            border-radius: 4px;
+            border: 1px solid #F75E05;
+            font-size: 16px;
+        }
+    }
+    // .home-hero__buttons
+
+    &__buttons {
+        display: flex;
+        gap: 24px;
+        @media(max-width:425px){
+            flex-direction: column;
+        }
+    }
+
+    // header__info
+    
+    .info{
+        display: flex;
+        gap: 141px;
+        @media(max-width:1200px){
+            justify-content: center;
+        }
+        @media(max-width:991px){
+            align-items: center;
+            gap: 70px;
+            flex-direction: column;
+        }
+        // info__content
+        &__content{
+            position: relative;
+            font-size: 100px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            &::after{
+                content: '';
+                width: 8px;
+                height: 8px;
+                background: #FF3F3A;
+                border-radius: 50%;
+                position: absolute;
+                right: 0;
+                right: -30%;
+                @media(max-width:991px){
+                    right: 0;
+                    left: 46%;
+                    bottom: 0;
+                    transform: translateY(43px);
+                }
+            }
+            &:nth-of-type(4){
+                &::after{
+                    content: unset;
+                }
+            }
+        }
+
+        // info-numbers
+
+        &-numbers{
+            font-weight: 900;
+            font-size: 46px;
+        }
+
+        // info-subtitle
+
+        &-subtitle{
+            font-weight: 400;
+            font-size: 16px;
+        }
+    }
+}
+
+
+
+
+

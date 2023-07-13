@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "authors_createx",
+  "info": {
+    "singularName": "authors",
+    "pluralName": "authors-createx",
+    "displayName": "Authors"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "author": {
+      "type": "string"
+    },
+    "specialty": {
+      "type": "string"
+    },
+    "avatar": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
